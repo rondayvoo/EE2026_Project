@@ -38,14 +38,13 @@ module Top_Student (
     
     reg [2:0] ctr6p25m = 0;
     reg clk6p25m = 0;
-    wire reset;
+    wire reset; //From button
     wire frame_begin;
     wire sending_pixels;
     wire sample_pixel;
     wire [12:0] pixel_index;
     reg [15:0] oled_data = 16'h07E0;
     //reg [15:0] oled_data;
-    
     
     Audio_Capture microphone(CLK100MHZ, clk20k, J_MIC3_Pin3, J_MIC3_Pin1, J_MIC3_Pin4, mic_in);
     Oled_Display display(clk6p25m, reset, frame_begin, sending_pixels, sample_pixel, pixel_index, oled_data,
