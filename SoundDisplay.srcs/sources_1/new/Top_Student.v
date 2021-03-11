@@ -16,7 +16,7 @@
 
 
 module Top_Student (
-    //Port JB, bottom row for mic
+    //Port JA, top row for mic
     input  J_MIC3_Pin3,   // Connect from this signal to Audio_Capture.v
     output J_MIC3_Pin1,   // Connect to this signal from Audio_Capture.v
     output J_MIC3_Pin4,    // Connect to this signal from Audio_Capture.v
@@ -29,8 +29,10 @@ module Top_Student (
     input btnR,
     input btnU,
     output [15:0] led,
-    output [0:7] JC //Port JC for display
+    output [0:7] JDisplay //Port JB for display
     );
+    
+    reg [20:0] dbouncectr = 0;
     
     reg [11:0] ctr20k = 0;
     reg clk20k = 0;
@@ -38,19 +40,19 @@ module Top_Student (
     
     reg [2:0] ctr6p25m = 0;
     reg clk6p25m = 0;
-    wire reset; //From button
+    wire reset; //From btnC
     wire frame_begin;
     wire sending_pixels;
     wire sample_pixel;
     wire [12:0] pixel_index;
-    reg [15:0] oled_data = 16'h07E0;
-    //reg [15:0] oled_data;
+    //reg [15:0] oled_data = 16'h07E0;
+    reg [15:0] oled_data = 0;
     
     Audio_Capture microphone(CLK100MHZ, clk20k, J_MIC3_Pin3, J_MIC3_Pin1, J_MIC3_Pin4, mic_in);
     Oled_Display display(clk6p25m, reset, frame_begin, sending_pixels, sample_pixel, pixel_index, oled_data,
-    JC[0], JC[1], JC[3], JC[4], JC[5], JC[6], JC[7]);
+                         JDisplay[0], JDisplay[1], JDisplay[3], JDisplay[4], JDisplay[5], JDisplay[6], JDisplay[7]);
     
-    SPO dbounceC(CLK100MHZ, clk20k, btnC, reset);
+    SPO dbounceC(dbouncectr[20], btnC, reset);
     
     assign led[11:0] = sw[0] ? mic_in : 0;
     
@@ -59,9 +61,10 @@ module Top_Student (
         clk20k <= ctr20k == 0 ? ~clk20k : clk20k;
         ctr6p25m <= ctr6p25m + 1;
         clk6p25m <= ctr6p25m == 0 ? ~clk6p25m : clk6p25m;
+        dbouncectr <= dbouncectr + 1;
         
         //oled_data[4:0] <= mic_in[11:8]; //Red
-        //oled_data[10:5] <= mic_in[11:7]; //Green
+        oled_data[10:5] <= mic_in[11:7]; //Green
         //oled_data[15:11] <= mic_in[11:8]; //Blue
     end
 

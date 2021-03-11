@@ -21,7 +21,6 @@
 
 
 module SPO(
-    input CLOCK,
     input SLOWCLOCK,
     input D,
     output Q
@@ -29,13 +28,9 @@ module SPO(
     
     wire Dint;
     wire Qint;
-    wire Cint;
-    wire L;
     
-    assign Q = Cint & ~L;
+    assign Q = Dint & ~Qint;
     
     dFlip flip1(SLOWCLOCK, D, Dint);
     dFlip flip2(SLOWCLOCK, Dint, Qint);
-    dFlip flip3(CLOCK, Dint & ~Qint, Cint);
-    dFlip flip4(CLOCK, Cint, L);
 endmodule

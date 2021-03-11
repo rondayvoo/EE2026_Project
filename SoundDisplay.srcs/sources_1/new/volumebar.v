@@ -39,10 +39,10 @@ module volumebar (
     wire [12:0] xyconvert;
     
     reg [15:0] colorGreen = 16'h07E0;
-    reg [15:0] colorYellow = 16'hFCF8;
-    reg [15:0] colorRed = 16'hF411;
-    reg [15:0] colorWhite = 0;
-    reg [15:0] colorBlack = 16'hFFFF;
+    reg [15:0] colorYellow = 16'hF6C9;
+    reg [15:0] colorRed = 16'hF945;
+    reg [15:0] colorWhite = 16'hFFFF;
+    reg [15:0] colorBlack = 0;
     
     SPO dbC(CLK100MHZ, ctr21[20], btnC, dbounceC);
     SPO dbD(CLK100MHZ, ctr21[20], btnD, dbounceD);
@@ -58,5 +58,8 @@ module volumebar (
         ctr21 <= ctr21 + 1;
         ctr6p25m <= ctr6p25m + 1;                        
         clk6p25m <= ctr6p25m == 0 ? ~clk6p25m : clk6p25m;
+    end
+    
+    always @ (posedge clk6p25m) begin
     end
 endmodule
