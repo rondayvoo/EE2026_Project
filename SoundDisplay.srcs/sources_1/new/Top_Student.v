@@ -63,8 +63,8 @@ module Top_Student (
         clk6p25m <= ctr6p25m == 0 ? ~clk6p25m : clk6p25m;
         dbouncectr <= dbouncectr + 1;
         
-        //oled_data[4:0] <= mic_in[11:8]; //Red
-        oled_data[10:5] <= mic_in[11:7]; //Green
+        oled_data[4:0] <= mic_in[11:8]; //Red
+        //oled_data[10:5] <= mic_in[11:7]; //Green
         //oled_data[15:11] <= mic_in[11:8]; //Blue
     end
 

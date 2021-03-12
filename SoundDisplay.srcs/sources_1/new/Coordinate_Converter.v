@@ -21,10 +21,11 @@
 
 
 module Coordinate_Converter(
-    input [6:0] xpos,
-    input [5:0] ypos,
-    output [12:0] pxindex
+    input [12:0] pxindex,
+    output [6:0] xpos,
+    output [5:0] ypos
     );
     
-    assign pxindex = ypos * 96 + xpos;
+    assign xpos = pxindex % 96;
+    assign ypos = pxindex / 96;
 endmodule

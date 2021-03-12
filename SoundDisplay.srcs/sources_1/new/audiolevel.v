@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 
 module audiolevel (
-    //Port JB, bottom row for mic
+    //Port JA, bottom row for mic
     input  J_MIC3_Pin3,   // Connect from this signal to Audio_Capture.v
     output J_MIC3_Pin1,   // Connect to this signal from Audio_Capture.v
     output J_MIC3_Pin4,    // Connect to this signal from Audio_Capture.v
@@ -12,8 +12,7 @@ module audiolevel (
     //sw[1] shows alphabet on 7seg
     output [15:0] led,
     output [3:0] an,
-    output [6:0] seg,
-    output reg [3:0] ave
+    output [6:0] seg
     );
     
     reg [6:0] charL = 7'b1000111;
@@ -30,7 +29,7 @@ module audiolevel (
     reg [6:0] char8 = 7'b0000000;
     reg [6:0] char9 = 7'b0010000;
     
-    reg [11:0] SEGCTR = 0;
+    reg [13:0] SEGCTR = 0;
     reg SEGCLOCK = 0;
     wire [3:0] anreg;
     wire [6:0] segreg;
@@ -43,15 +42,15 @@ module audiolevel (
     reg clk20k = 0;
     wire [11:0] mic_in;
     reg [15:0] ledave = 0;
-    reg [15:0] ledpeak = 0;
+    wire [3:0] ave;
     
-    Audio_Capture microphone(CLK100MHZ, clk20k, J_MIC3_Pin3, J_MIC3_Pin1, J_MIC3_Pin4, mic_in);
-    Sixtyfour_to_One_Average averager(clk20k, mic_in[11:8], ave);
-    Complex_Seven display(SEGCLOCK, seg1, seg2, seg3, seg4, anreg, segreg);
+    Audio_Capture m0(CLK100MHZ, clk20k, J_MIC3_Pin3, J_MIC3_Pin1, J_MIC3_Pin4, mic_in);
+    Sixtyfour_to_One_Average a0(clk20k, mic_in[11:8], ave);
+    Complex_Seven d0(SEGCLOCK, seg1, seg2, seg3, seg4, anreg, segreg);
     
     assign an = anreg;
     assign seg = segreg;
-    assign led = sw[0] ? ledave : mic_in & 16'b0000111111111111;
+    assign led = sw[0] ? ledave : mic_in;
     
     always @ (posedge CLK100MHZ) begin
         ctr20k <= ctr20k >= 2500 ? 0 : ctr20k + 1;
@@ -75,8 +74,6 @@ module audiolevel (
         ledave[13] <= ave >= 13 ? 1 : 0;
         ledave[14] <= ave >= 14 ? 1 : 0;
         ledave[15] <= ave >= 15 ? 1 : 0;
-        
-        ledpeak <= ledpeak | ledave;
     end
     
     always @ (posedge ctr20k) begin

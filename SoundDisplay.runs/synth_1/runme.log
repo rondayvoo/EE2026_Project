@@ -1,6 +1,6 @@
 
 *** Running vivado
-    with args -log Top_Student.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top_Student.tcl
+    with args -log voicepong.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source voicepong.tcl
 
 
 ****** Vivado v2018.2 (64-bit)
@@ -8,19 +8,21 @@
   **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 
-source Top_Student.tcl -notrace
-Command: synth_design -top Top_Student -part xc7a35tcpg236-1
+source voicepong.tcl -notrace
+Command: synth_design -top voicepong -part xc7a35tcpg236-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 10608 
+INFO: Helper process launched with PID 6620 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 356.008 ; gain = 99.363
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 356.176 ; gain = 99.266
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'Top_Student' [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:18]
-INFO: [Synth 8-6157] synthesizing module 'Audio_Capture' [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/Audio_Capture.v:25]
-INFO: [Synth 8-6155] done synthesizing module 'Audio_Capture' (1#1) [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/Audio_Capture.v:25]
+INFO: [Synth 8-6157] synthesizing module 'voicepong' [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/voicepong.v:23]
+INFO: [Synth 8-6157] synthesizing module 'SPO' [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/SPO.v:23]
+INFO: [Synth 8-6157] synthesizing module 'dFlip' [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/dFlip.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'dFlip' (1#1) [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/dFlip.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'SPO' (2#1) [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/SPO.v:23]
 INFO: [Synth 8-6157] synthesizing module 'Oled_Display' [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/Oled_Display.v:36]
 	Parameter Width bound to: 96 - type: integer 
 	Parameter Height bound to: 64 - type: integer 
@@ -75,39 +77,16 @@ INFO: [Synth 8-6157] synthesizing module 'Oled_Display' [C:/Users/rondayvoo/Docu
 INFO: [Synth 8-226] default block is never used [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/Oled_Display.v:124]
 INFO: [Synth 8-226] default block is never used [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/Oled_Display.v:201]
 WARNING: [Synth 8-693] zero replication count - replication ignored [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/Oled_Display.v:349]
-INFO: [Synth 8-6155] done synthesizing module 'Oled_Display' (2#1) [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/Oled_Display.v:36]
-WARNING: [Synth 8-350] instance 'display' of module 'Oled_Display' requires 15 connections, but only 14 given [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:52]
-INFO: [Synth 8-6157] synthesizing module 'SPO' [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/SPO.v:23]
-INFO: [Synth 8-6157] synthesizing module 'dFlip' [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/dFlip.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'dFlip' (3#1) [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/dFlip.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'SPO' (4#1) [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/SPO.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'Top_Student' (5#1) [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:18]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port led[15]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port led[14]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port led[13]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port led[12]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port JDisplay[2]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[15]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[14]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[13]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[12]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[11]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[10]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[9]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[8]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[7]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[6]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[5]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[4]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[3]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[2]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[1]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port btnD
-WARNING: [Synth 8-3331] design Top_Student has unconnected port btnL
-WARNING: [Synth 8-3331] design Top_Student has unconnected port btnR
-WARNING: [Synth 8-3331] design Top_Student has unconnected port btnU
+INFO: [Synth 8-6155] done synthesizing module 'Oled_Display' (3#1) [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/Oled_Display.v:36]
+INFO: [Synth 8-6157] synthesizing module 'Coordinate_Converter' [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/Coordinate_Converter.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Coordinate_Converter' (4#1) [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/Coordinate_Converter.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/voicepong.v:215]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/voicepong.v:254]
+INFO: [Synth 8-6155] done synthesizing module 'voicepong' (5#1) [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/voicepong.v:23]
+WARNING: [Synth 8-3917] design voicepong has port dp driven by constant 1
+WARNING: [Synth 8-3331] design voicepong has unconnected port JDisplay[2]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 411.164 ; gain = 154.520
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 411.203 ; gain = 154.293
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -120,10 +99,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 411.164 ; gain = 154.520
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 411.203 ; gain = 154.293
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 411.164 ; gain = 154.520
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 411.203 ; gain = 154.293
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -131,108 +110,251 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc]
-WARNING: [Vivado 12-584] No ports matched 'seg[0]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:82]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:82]
+WARNING: [Vivado 12-584] No ports matched 'sw[0]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:12]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:12]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg[0]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:83]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:83]
+WARNING: [Vivado 12-584] No ports matched 'sw[0]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:13]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:13]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg[1]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:84]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:84]
+WARNING: [Vivado 12-584] No ports matched 'sw[1]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:14]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:14]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg[1]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:85]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:85]
+WARNING: [Vivado 12-584] No ports matched 'sw[1]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:15]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:15]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg[2]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:86]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:86]
+WARNING: [Vivado 12-584] No ports matched 'sw[2]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:16]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:16]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg[2]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:87]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:87]
+WARNING: [Vivado 12-584] No ports matched 'sw[2]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:17]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:17]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg[3]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:88]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:88]
+WARNING: [Vivado 12-584] No ports matched 'sw[3]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:18]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:18]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg[3]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:89]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:89]
+WARNING: [Vivado 12-584] No ports matched 'sw[3]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:19]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:19]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg[4]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:90]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:90]
+WARNING: [Vivado 12-584] No ports matched 'sw[4]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:20]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:20]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg[4]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:91]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:91]
+WARNING: [Vivado 12-584] No ports matched 'sw[4]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:21]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:21]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg[5]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:92]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:92]
+WARNING: [Vivado 12-584] No ports matched 'sw[5]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:22]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:22]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg[5]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:93]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:93]
+WARNING: [Vivado 12-584] No ports matched 'sw[5]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:23]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:23]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg[6]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:94]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:94]
+WARNING: [Vivado 12-584] No ports matched 'sw[6]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:24]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:24]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg[6]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:95]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:95]
+WARNING: [Vivado 12-584] No ports matched 'sw[6]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:25]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:25]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dp'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:97]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:97]
+WARNING: [Vivado 12-584] No ports matched 'sw[7]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:26]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:26]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dp'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:98]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:98]
+WARNING: [Vivado 12-584] No ports matched 'sw[7]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:27]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:27]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'an[0]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:100]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:100]
+WARNING: [Vivado 12-584] No ports matched 'sw[8]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:28]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:28]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'an[0]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:101]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:101]
+WARNING: [Vivado 12-584] No ports matched 'sw[8]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:29]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:29]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'an[1]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:102]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:102]
+WARNING: [Vivado 12-584] No ports matched 'sw[9]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:30]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:30]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'an[1]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:103]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:103]
+WARNING: [Vivado 12-584] No ports matched 'sw[9]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:31]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:31]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'an[2]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:104]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:104]
+WARNING: [Vivado 12-584] No ports matched 'sw[10]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:32]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:32]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'an[2]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:105]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:105]
+WARNING: [Vivado 12-584] No ports matched 'sw[10]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:33]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:33]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'an[3]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:106]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:106]
+WARNING: [Vivado 12-584] No ports matched 'sw[11]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:34]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:34]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'an[3]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:107]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:107]
+WARNING: [Vivado 12-584] No ports matched 'sw[11]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:35]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[12]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:36]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:36]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[12]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:37]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:37]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[13]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:38]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:38]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[13]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:39]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:39]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[14]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:40]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:40]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[14]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:41]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:41]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[15]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:42]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:42]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[15]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:43]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:43]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[0]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:47]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:47]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[0]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:48]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:48]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[1]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:49]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:49]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[1]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:50]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:50]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[2]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:51]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:51]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[2]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:52]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:52]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[3]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:53]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:53]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[3]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:54]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:54]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[4]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:55]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:55]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[4]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:56]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:56]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[5]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:57]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:57]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[5]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:58]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:58]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[6]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:59]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:59]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[6]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:60]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:60]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[7]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:61]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:61]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[7]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:62]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:62]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[8]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:63]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:63]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[8]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:64]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:64]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[9]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:65]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:65]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[9]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:66]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:66]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[10]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:67]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:67]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[10]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:68]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:68]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[11]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:69]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:69]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[11]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:70]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:70]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[12]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:71]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:71]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[12]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:72]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:72]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[13]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:73]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:73]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[13]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:74]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:74]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[14]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:75]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:75]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[14]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:76]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:76]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[15]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:77]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:77]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[15]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:78]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:78]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'J_MIC3_Pin1'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:126]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:126]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'J_MIC3_Pin1'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:127]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:127]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'J_MIC3_Pin3'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:132]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:132]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'J_MIC3_Pin3'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:133]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:133]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'J_MIC3_Pin4'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:135]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:135]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'J_MIC3_Pin4'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:136]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:136]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 Finished Parsing XDC File [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Top_Student_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/Top_Student_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/voicepong_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/voicepong_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 711.270 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 731.371 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 711.270 ; gain = 454.625
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 731.371 ; gain = 474.461
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 711.270 ; gain = 454.625
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 731.371 ; gain = 474.461
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 711.270 ; gain = 454.625
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 731.371 ; gain = 474.461
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Oled_Display'
 INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "fsm_next_state0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "clk20k0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/voicepong.v:110]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/voicepong.v:115]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/voicepong.v:199]
+INFO: [Synth 8-5546] ROM "comScore" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "scoreWait" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "playerScore" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -271,7 +393,7 @@ INFO: [Synth 8-5546] ROM "clk20k0" won't be mapped to RAM because it is too spar
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'Oled_Display'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 711.270 ; gain = 454.625
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 731.371 ; gain = 474.461
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -284,30 +406,42 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
+	   2 Input     32 Bit       Adders := 10    
 	   2 Input     17 Bit       Adders := 1     
-	   2 Input     12 Bit       Adders := 1     
-	   2 Input      6 Bit       Adders := 1     
-	   2 Input      3 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 3     
+	   2 Input      6 Bit       Adders := 3     
+	   2 Input      4 Bit       Adders := 2     
+	   2 Input      3 Bit       Adders := 3     
+	   2 Input      2 Bit       Adders := 1     
 +---Registers : 
 	               40 Bit    Registers := 1     
 	               17 Bit    Registers := 1     
 	               16 Bit    Registers := 1     
-	               12 Bit    Registers := 3     
-	                6 Bit    Registers := 1     
-	                3 Bit    Registers := 1     
-	                1 Bit    Registers := 5     
+	                7 Bit    Registers := 2     
+	                6 Bit    Registers := 3     
+	                4 Bit    Registers := 3     
+	                3 Bit    Registers := 3     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 17    
 +---Muxes : 
 	   2 Input     40 Bit        Muxes := 3     
 	  32 Input     32 Bit        Muxes := 1     
 	   2 Input     32 Bit        Muxes := 2     
 	  32 Input     20 Bit        Muxes := 1     
 	   2 Input     17 Bit        Muxes := 1     
-	   2 Input     12 Bit        Muxes := 2     
+	   2 Input      7 Bit        Muxes := 3     
+	   3 Input      7 Bit        Muxes := 1     
+	  16 Input      7 Bit        Muxes := 1     
 	  32 Input      6 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 1     
-	   2 Input      5 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 4     
 	  32 Input      5 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 3     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 18    
+	   3 Input      1 Bit        Muxes := 4     
+	  16 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -315,23 +449,37 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
-Module Top_Student 
+Module voicepong 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     12 Bit       Adders := 1     
-	   2 Input      3 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 10    
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 3     
+	   2 Input      6 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 2     
+	   2 Input      3 Bit       Adders := 3     
+	   2 Input      2 Bit       Adders := 1     
 +---Registers : 
 	               16 Bit    Registers := 1     
-	               12 Bit    Registers := 1     
-	                3 Bit    Registers := 1     
-	                1 Bit    Registers := 2     
+	                7 Bit    Registers := 2     
+	                6 Bit    Registers := 2     
+	                4 Bit    Registers := 3     
+	                3 Bit    Registers := 3     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 7     
 +---Muxes : 
-	   2 Input     12 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 1     
-Module Audio_Capture 
+	   2 Input      7 Bit        Muxes := 3     
+	   3 Input      7 Bit        Muxes := 1     
+	  16 Input      7 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 2     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 16    
+	   3 Input      1 Bit        Muxes := 4     
+	  16 Input      1 Bit        Muxes := 1     
+Module dFlip 
 Detailed RTL Component Info : 
 +---Registers : 
-	               12 Bit    Registers := 2     
 	                1 Bit    Registers := 1     
 Module Oled_Display 
 Detailed RTL Component Info : 
@@ -353,10 +501,6 @@ Detailed RTL Component Info :
 	   2 Input      5 Bit        Muxes := 2     
 	  32 Input      5 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 2     
-Module dFlip 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -373,37 +517,34 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-5546] ROM "display/fsm_next_state0" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "display/fsm_next_state0" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "clk20k0" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-3331] design Top_Student has unconnected port led[15]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port led[14]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port led[13]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port led[12]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port JDisplay[2]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[15]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[14]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[13]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[12]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[11]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[10]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[9]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[8]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[7]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[6]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[5]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[4]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[3]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[2]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[1]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port btnD
-WARNING: [Synth 8-3331] design Top_Student has unconnected port btnL
-WARNING: [Synth 8-3331] design Top_Student has unconnected port btnR
-WARNING: [Synth 8-3331] design Top_Student has unconnected port btnU
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\oled_data_reg[10] )
-WARNING: [Synth 8-3332] Sequential element (oled_data_reg[10]) is unused and will be removed from module Top_Student.
+INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "comScore" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "playerScore" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3917] design voicepong has port dp driven by constant 1
+WARNING: [Synth 8-3331] design voicepong has unconnected port JDisplay[2]
+INFO: [Synth 8-3886] merging instance 'oled_data_reg[0]' (FDS) to 'oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'oled_data_reg[1]' (FDS) to 'oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'oled_data_reg[2]' (FDS) to 'oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'oled_data_reg[3]' (FDS) to 'oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'oled_data_reg[4]' (FDS) to 'oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'oled_data_reg[5]' (FDS) to 'oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'oled_data_reg[6]' (FDS) to 'oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'oled_data_reg[7]' (FDS) to 'oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'oled_data_reg[8]' (FDS) to 'oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'oled_data_reg[9]' (FDS) to 'oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'oled_data_reg[10]' (FDS) to 'oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'oled_data_reg[11]' (FDS) to 'oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'oled_data_reg[12]' (FDS) to 'oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'oled_data_reg[13]' (FDS) to 'oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'oled_data_reg[14]' (FDS) to 'oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'segreg_reg[0]' (FDE) to 'segreg_reg[3]'
+WARNING: [Synth 8-3332] Sequential element (dbL/flip1/Q_reg) is unused and will be removed from module voicepong.
+WARNING: [Synth 8-3332] Sequential element (dbL/flip2/Q_reg) is unused and will be removed from module voicepong.
+WARNING: [Synth 8-3332] Sequential element (dbR/flip1/Q_reg) is unused and will be removed from module voicepong.
+WARNING: [Synth 8-3332] Sequential element (dbR/flip2/Q_reg) is unused and will be removed from module voicepong.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 711.270 ; gain = 454.625
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 731.371 ; gain = 474.461
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -415,13 +556,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 738.602 ; gain = 481.957
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 737.961 ; gain = 481.051
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 758.914 ; gain = 502.270
+Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 805.508 ; gain = 548.598
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -433,7 +574,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 773.910 ; gain = 517.266
+Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 811.699 ; gain = 554.789
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -457,7 +598,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 773.910 ; gain = 517.266
+Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 811.699 ; gain = 554.789
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -470,7 +611,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 773.910 ; gain = 517.266
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 811.699 ; gain = 554.789
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -482,25 +623,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 773.910 ; gain = 517.266
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 811.699 ; gain = 554.789
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 773.910 ; gain = 517.266
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 811.699 ; gain = 554.789
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 773.910 ; gain = 517.266
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 811.699 ; gain = 554.789
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 773.910 ; gain = 517.266
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 811.699 ; gain = 554.789
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -516,41 +657,49 @@ Report Cell Usage:
 +------+-------+------+
 |      |Cell   |Count |
 +------+-------+------+
-|1     |BUFG   |     2|
-|2     |CARRY4 |    21|
-|3     |LUT1   |     5|
-|4     |LUT2   |    36|
-|5     |LUT3   |    36|
-|6     |LUT4   |    20|
-|7     |LUT5   |    41|
-|8     |LUT6   |    80|
-|9     |FDRE   |   165|
-|10    |FDRE_1 |    31|
-|11    |FDSE_1 |     1|
-|12    |IBUF   |     4|
-|13    |OBUF   |    21|
-|14    |OBUFT  |     5|
+|1     |BUFG   |     3|
+|2     |CARRY4 |   138|
+|3     |LUT1   |    30|
+|4     |LUT2   |   312|
+|5     |LUT3   |    61|
+|6     |LUT4   |   320|
+|7     |LUT5   |    82|
+|8     |LUT6   |   144|
+|9     |MUXF7  |     1|
+|10    |FDRE   |   164|
+|11    |FDRE_1 |    31|
+|12    |FDSE   |     4|
+|13    |FDSE_1 |     1|
+|14    |IBUF   |     4|
+|15    |OBUF   |    19|
+|16    |OBUFT  |     1|
 +------+-------+------+
 
 Report Instance Areas: 
-+------+-------------+--------------+------+
-|      |Instance     |Module        |Cells |
-+------+-------------+--------------+------+
-|1     |top          |              |   468|
-|2     |  dbounceC   |SPO           |     4|
-|3     |    flip1    |dFlip         |     2|
-|4     |    flip2    |dFlip_0       |     2|
-|5     |  display    |Oled_Display  |   291|
-|6     |  microphone |Audio_Capture |    77|
-+------+-------------+--------------+------+
++------+----------+---------------------+------+
+|      |Instance  |Module               |Cells |
++------+----------+---------------------+------+
+|1     |top       |                     |  1315|
+|2     |  d0      |Oled_Display         |   429|
+|3     |  dbC     |SPO                  |     5|
+|4     |    flip1 |dFlip_5              |     2|
+|5     |    flip2 |dFlip_6              |     3|
+|6     |  dbD     |SPO_0                |     6|
+|7     |    flip1 |dFlip_3              |     3|
+|8     |    flip2 |dFlip_4              |     3|
+|9     |  dbU     |SPO_1                |     3|
+|10    |    flip1 |dFlip                |     1|
+|11    |    flip2 |dFlip_2              |     2|
+|12    |  p0      |Coordinate_Converter |   103|
++------+----------+---------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 773.910 ; gain = 517.266
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 811.699 ; gain = 554.789
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 25 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 773.910 ; gain = 217.160
-Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 773.910 ; gain = 517.266
+Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 811.699 ; gain = 234.621
+Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 811.699 ; gain = 554.789
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 57 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 175 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -560,11 +709,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   FDSE_1 => FDSE (inverted pins: C): 1 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-34 Infos, 75 Warnings, 24 Critical Warnings and 0 Errors encountered.
+57 Infos, 79 Warnings, 70 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 773.910 ; gain = 530.066
+synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:34 . Memory (MB): peak = 811.699 ; gain = 567.812
 WARNING: [Constraints 18-5210] No constraint will be written out.
-INFO: [Common 17-1381] The checkpoint 'C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.runs/synth_1/Top_Student.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_utilization -file Top_Student_utilization_synth.rpt -pb Top_Student_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 773.910 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Thu Mar 11 11:12:28 2021...
+INFO: [Common 17-1381] The checkpoint 'C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.runs/synth_1/voicepong.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file voicepong_utilization_synth.rpt -pb voicepong_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 811.699 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Mar 13 02:26:06 2021...

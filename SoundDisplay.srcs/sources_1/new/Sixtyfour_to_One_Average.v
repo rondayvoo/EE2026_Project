@@ -26,12 +26,12 @@ module Sixtyfour_to_One_Average(
     output reg [3:0] average
     );
     
-    reg [3:0] ctr = 0;
-    reg [9:0] total = 0;
+    reg [6:0] ctr = 0;
+    reg [13:0] total = 0;
     
     always @ (posedge SAMPLECLOCK) begin
         ctr <= ctr + 1;
-        total <= ctr == 0 ? 0 : total + data;
-        average <= ctr == 0 ? total[9:6] : average;
+        total <= ctr == 0 ? 0 : total + data + 1;
+        average <= ctr == 0 ? (total >> 9) : average;
     end
 endmodule
