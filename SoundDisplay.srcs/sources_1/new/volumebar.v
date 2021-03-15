@@ -12,32 +12,53 @@ module volumebar (
     input btnL,
     input btnR,
     input btnU,
+    
+    input dbounceC,
+    input dbounceD,
+    input dbounceL,
+    input dbounceR,
+    input dbounceU,
+    
+    input [6:0] xpoint,
+    input [5:0] ypoint,
+    input globalreset,
+    
+    output reg [15:0] ledreg = 0,
+    output reg [3:0] anreg = 15,
+    output reg [6:0] segreg = 127,
+    output reg [15:0] oled_data = 0,
+    output reg [3:0] statechange = 15
     //btnL moves the bar to the left
     //btnR moves the bar to the right
     //input [3:0] volume,
-    output [0:7] JDisplay //Port JB for display
     );
     
     reg [20:0] ctr21 = 0;
-    wire dbounceC;
-    wire dbounceD;
-    wire dbounceL;
-    wire dbounceR;
-    wire dbounceU;
+    reg [20:0] pausectr = 1;
     
     reg [2:0] ctr6p25m = 0;
     reg clk6p25m = 0;
-    reg [15:0] oled_data = 0;
-    wire frame_begin;
-    wire sending_pixels;
-    wire sample_pixel;
-    wire [12:0] pixel_index;
-    wire [4:0] teststate;
     
-    wire [6:0] xpoint;
-    wire [5:0] ypoint;
+    reg pause = 0;
+    reg reset = 0;
     reg [3:0] barxpos = 7;
+    reg [3:0] cursor = 0;
     reg [3:0] volume = 0;
+    reg [1:0] segdisplayctr = 0;
+    
+    reg [6:0] charL = 7'b1000111;
+    reg [6:0] charM = 7'b1101010;
+    reg [6:0] charH = 7'b0001001;
+    reg [6:0] char0 = 7'b1000000;
+    reg [6:0] char1 = 7'b1111001;
+    reg [6:0] char2 = 7'b0100100;
+    reg [6:0] char3 = 7'b0110000;
+    reg [6:0] char4 = 7'b0011001;
+    reg [6:0] char5 = 7'b0010010;
+    reg [6:0] char6 = 7'b0000010;
+    reg [6:0] char7 = 7'b1111000;
+    reg [6:0] char8 = 7'b0000000;
+    reg [6:0] char9 = 7'b0010000;
     
     reg [15:0] colorPink = 16'hC819;
     reg [15:0] colorViolet = 16'h5031;
@@ -48,28 +69,25 @@ module volumebar (
     reg [15:0] colorWhite = 16'hFFFF;
     reg [15:0] colorBlack = 0;
     
-    SPO dbC(ctr21[20], btnC, dbounceC);
-    SPO dbD(ctr21[20], btnD, dbounceD);
-    SPO dbL(ctr21[20], btnL, dbounceL);
-    SPO dbR(ctr21[20], btnR, dbounceR);
-    SPO dbU(ctr21[20], btnU, dbounceU);
-    
-    Oled_Display d0(clk6p25m, dbounceC, frame_begin, sending_pixels, sample_pixel, pixel_index, oled_data,
-                    JDisplay[0], JDisplay[1], JDisplay[3], JDisplay[4], JDisplay[5], JDisplay[6], JDisplay[7], teststate);
-    Coordinate_Converter p0(pixel_index, xpoint, ypoint);
+    reg [15:0] pausedata [0:6143];       
+    initial $readmemh("pausedata.txt", pausedata);
+    //reg [15:0] gameover [0:6143];       
+    //initial $readmemh("gameover.txt", gameover);
     
     always @ (posedge CLK100MHZ) begin
         ctr21 <= ctr21 + 1;
         ctr6p25m <= ctr6p25m + 1;                        
         clk6p25m <= ctr6p25m == 0 ? ~clk6p25m : clk6p25m;
-    end
-    
-    always @ (posedge ctr21[20]) begin
-        if (dbounceU) begin
+        
+        if (statechange != 15) begin
+            statechange <= 15;       
+        end                         
+        
+        if (dbounceU && !pause) begin
             volume <= volume + 1;
         end
         
-        if (dbounceD) begin
+        if (dbounceD && !pause) begin
             volume <= volume - 1;
         end
         
@@ -79,104 +97,293 @@ module volumebar (
         
         if (dbounceR && barxpos < 14) begin      
             barxpos <= barxpos + 1;
-        end                                        
-    end
-    
-    always @ (posedge clk6p25m) begin  
-        //Volume bar     
-        if (xpoint >= 43 + (barxpos - 7) * 5 && xpoint <= 51 + (barxpos - 7) * 5 && 
-            ypoint >= 53 && ypoint <= 54 && volume >= 0 && !sw[6]) begin
-            oled_data <= sw[5] ? colorBlue : colorGreen;
+        end  
+        
+        if (btnL && btnR && !pause) begin
+            pausectr <= pausectr + 1;
+            ledreg <= pausectr == 0 ? (ledreg << 1) + 1 : ledreg;
+            
+            if (ledreg == 65535) begin
+                pause <= 1;
+                pausectr <= 0;
+                ledreg <= 0;
+            end
+                
         end
-        
-        else if (xpoint >= 43 + (barxpos - 7) * 5 && xpoint <= 51 + (barxpos - 7) * 5 && 
-                 ypoint >= 50 && ypoint <= 51 && volume >= 1 && !sw[6]) begin
-            oled_data <= sw[5] ? colorBlue : colorGreen;                                                      
-        end 
-        
-        else if (xpoint >= 43 + (barxpos - 7) * 5 && xpoint <= 51 + (barxpos - 7) * 5 && 
-                 ypoint >= 47 && ypoint <= 48 && volume >= 2 && !sw[6]) begin
-            oled_data <= sw[5] ? colorBlue : colorGreen;                                                      
-        end 
-        
-        else if (xpoint >= 43 + (barxpos - 7) * 5 && xpoint <= 51 + (barxpos - 7) * 5 && 
-                 ypoint >= 44 && ypoint <= 45 && volume >= 3 && !sw[6]) begin
-            oled_data <= sw[5] ? colorBlue : colorGreen;                                                      
-        end                                                                               
-        
-        else if (xpoint >= 43 + (barxpos - 7) * 5 && xpoint <= 51 + (barxpos - 7) * 5 && 
-                 ypoint >= 41 && ypoint <= 42 && volume >= 4 && !sw[6]) begin
-            oled_data <= sw[5] ? colorBlue : colorGreen;                                                      
-        end                                                                               
-        
-        else if (xpoint >= 43 + (barxpos - 7) * 5 && xpoint <= 51 + (barxpos - 7) * 5 && 
-                 ypoint >= 38 && ypoint <= 39 && volume >= 5 && !sw[6]) begin
-            oled_data <= sw[5] ? colorBlue : colorGreen;                                                      
-        end                                                                               
-        
-        else if (xpoint >= 43 + (barxpos - 7) * 5 && xpoint <= 51 + (barxpos - 7) * 5 && 
-                 ypoint >= 35 && ypoint <= 36 && volume >= 6 && !sw[6]) begin
-            oled_data <= sw[5] ? colorViolet : colorYellow;                                                      
-        end  
-        
-        else if (xpoint >= 43 + (barxpos - 7) * 5 && xpoint <= 51 + (barxpos - 7) * 5 && 
-                 ypoint >= 32 && ypoint <= 33 && volume >= 7 && !sw[6]) begin
-            oled_data <= sw[5] ? colorViolet : colorYellow;                                                      
-        end                                                                               
-                                                                                      
-        else if (xpoint >= 43 + (barxpos - 7) * 5 && xpoint <= 51 + (barxpos - 7) * 5 && 
-                 ypoint >= 29 && ypoint <= 30 && volume >= 8 && !sw[6]) begin                                                                              
-            oled_data <= sw[5] ? colorViolet : colorYellow;                                                                                                                                    
-        end                                                                                                                                                             
-                                                                                      
-        else if (xpoint >= 43 + (barxpos - 7) * 5 && xpoint <= 51 + (barxpos - 7) * 5 && 
-                 ypoint >= 26 && ypoint <= 27 && volume >= 9 && !sw[6]) begin                                                                              
-            oled_data <= sw[5] ? colorViolet : colorYellow;                                                                                                                                    
-        end  
-        
-        else if (xpoint >= 43 + (barxpos - 7) * 5 && xpoint <= 51 + (barxpos - 7) * 5 && 
-                 ypoint >= 23 && ypoint <= 24 && volume >= 10 && !sw[6]) begin
-            oled_data <= sw[5] ? colorViolet : colorYellow;                                                          
-        end      
-        
-        else if (xpoint >= 43 + (barxpos - 7) * 5 && xpoint <= 51 + (barxpos - 7) * 5 && 
-                 ypoint >= 20 && ypoint <= 21 && volume >= 11 && !sw[6]) begin
-            oled_data <= sw[5] ? colorPink : colorRed;                                                                                                                                        
-        end 
-        
-        else if (xpoint >= 43 + (barxpos - 7) * 5 && xpoint <= 51 + (barxpos - 7) * 5 && 
-                 ypoint >= 17 && ypoint <= 18 && volume >= 12 && !sw[6]) begin
-            oled_data <= sw[5] ? colorPink : colorRed;                                                             
-        end   
-        
-        else if (xpoint >= 43 + (barxpos - 7) * 5 && xpoint <= 51 + (barxpos - 7) * 5 && 
-                 ypoint >= 14 && ypoint <= 15 && volume >= 13 && !sw[6]) begin
-            oled_data <= sw[5] ? colorPink : colorRed;                                                             
-        end   
-        
-        else if (xpoint >= 43 + (barxpos - 7) * 5 && xpoint <= 51 + (barxpos - 7) * 5 && 
-                 ypoint >= 11 && ypoint <= 12 && volume >= 14 && !sw[6]) begin
-            oled_data <= sw[5] ? colorPink : colorRed;                                                             
-        end 
-        
-        else if (xpoint >= 43 + (barxpos - 7) * 5 && xpoint <= 51 + (barxpos - 7) * 5 && 
-                 ypoint >= 8 && ypoint <= 9 && volume >= 15 && !sw[6]) begin
-            oled_data <= sw[5] ? colorPink : colorRed;                                                             
-        end 
-        
-        //Screen borders
-        else if (!(xpoint >= 1 && xpoint <= 94 && 
-                 ypoint >= 1 && ypoint <= 62) && !sw[4] && !sw[3]) begin
-            oled_data <= colorWhite;
-        end 
-        
-        else if (!(xpoint >= 3 && xpoint <= 92 && 
-                 ypoint >= 3 && ypoint <= 60) && !sw[4] && sw[3]) begin
-            oled_data <= colorWhite;
-        end                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
         
         else begin
-            oled_data <= 0;
+            pausectr <= 1;
+            ledreg <= 0;
+        end 
+        
+        if (dbounceU && pause == 1 && cursor > 0) begin
+            cursor <= cursor - 1;        
+        end                              
+                                         
+        if (dbounceD && pause == 1 && cursor < 2) begin
+            cursor <= cursor + 1;        
+        end                              
+        
+        if (dbounceC && pause == 1 && cursor == 0) begin
+            pause <= 0;
+            cursor <= 0;
+        end                               
+                                          
+        if (dbounceC && pause == 1 && cursor == 1) begin
+            reset <= 1;
+            pause <= 0;
+            cursor <= 0;
+        end                               
+                                          
+        if (dbounceC && pause == 1 && cursor == 2) begin
+            pause <= 0;
+            statechange <= 0;             
+        end   
+        
+        if (reset || globalreset) begin
+            volume <= 0;
+            barxpos <= 7;
+            reset <= 0;
+        end                                                    
+    end
+    
+    always @ (posedge ctr21[4]) begin 
+        if (pause) begin
+            case (cursor)                                             
+                0: begin                                              
+                    if (ypoint >= 19 && ypoint <= 25) begin           
+                        oled_data <= ~pausedata[ypoint * 96 + xpoint];
+                    end                                               
+                                                                      
+                    else begin                                        
+                        oled_data <= pausedata[ypoint * 96 + xpoint]; 
+                    end                                               
+                end                                                   
+                                                                      
+                1: begin                                              
+                    if (ypoint >= 27 && ypoint <= 33) begin           
+                        oled_data <= ~pausedata[ypoint * 96 + xpoint];
+                    end                                               
+                                                                      
+                    else begin                                        
+                        oled_data <= pausedata[ypoint * 96 + xpoint]; 
+                    end                                               
+                end                                                   
+                                                                      
+                2: begin                                              
+                    if (ypoint >= 35 && ypoint <= 41) begin           
+                        oled_data <= ~pausedata[ypoint * 96 + xpoint];
+                    end                                               
+                                                                      
+                    else begin                                        
+                        oled_data <= pausedata[ypoint * 96 + xpoint]; 
+                    end                                               
+                end                                                   
+            endcase                                                   
         end
+     
+        else begin
+            //Volume bar     
+            if (xpoint >= 43 + (barxpos - 7) * 5 && xpoint <= 51 + (barxpos - 7) * 5 && 
+                ypoint >= 53 && ypoint <= 54 && volume >= 0 && !sw[6]) begin
+                oled_data <= sw[5] ? colorBlue : colorGreen;
+            end
+            
+            else if (xpoint >= 43 + (barxpos - 7) * 5 && xpoint <= 51 + (barxpos - 7) * 5 && 
+                     ypoint >= 50 && ypoint <= 51 && volume >= 1 && !sw[6]) begin
+                oled_data <= sw[5] ? colorBlue : colorGreen;                                                      
+            end 
+            
+            else if (xpoint >= 43 + (barxpos - 7) * 5 && xpoint <= 51 + (barxpos - 7) * 5 && 
+                     ypoint >= 47 && ypoint <= 48 && volume >= 2 && !sw[6]) begin
+                oled_data <= sw[5] ? colorBlue : colorGreen;                                                      
+            end 
+            
+            else if (xpoint >= 43 + (barxpos - 7) * 5 && xpoint <= 51 + (barxpos - 7) * 5 && 
+                     ypoint >= 44 && ypoint <= 45 && volume >= 3 && !sw[6]) begin
+                oled_data <= sw[5] ? colorBlue : colorGreen;                                                      
+            end                                                                               
+            
+            else if (xpoint >= 43 + (barxpos - 7) * 5 && xpoint <= 51 + (barxpos - 7) * 5 && 
+                     ypoint >= 41 && ypoint <= 42 && volume >= 4 && !sw[6]) begin
+                oled_data <= sw[5] ? colorBlue : colorGreen;                                                      
+            end                                                                               
+            
+            else if (xpoint >= 43 + (barxpos - 7) * 5 && xpoint <= 51 + (barxpos - 7) * 5 && 
+                     ypoint >= 38 && ypoint <= 39 && volume >= 5 && !sw[6]) begin
+                oled_data <= sw[5] ? colorBlue : colorGreen;                                                      
+            end                                                                               
+            
+            else if (xpoint >= 43 + (barxpos - 7) * 5 && xpoint <= 51 + (barxpos - 7) * 5 && 
+                     ypoint >= 35 && ypoint <= 36 && volume >= 6 && !sw[6]) begin
+                oled_data <= sw[5] ? colorViolet : colorYellow;                                                      
+            end  
+            
+            else if (xpoint >= 43 + (barxpos - 7) * 5 && xpoint <= 51 + (barxpos - 7) * 5 && 
+                     ypoint >= 32 && ypoint <= 33 && volume >= 7 && !sw[6]) begin
+                oled_data <= sw[5] ? colorViolet : colorYellow;                                                      
+            end                                                                               
+                                                                                          
+            else if (xpoint >= 43 + (barxpos - 7) * 5 && xpoint <= 51 + (barxpos - 7) * 5 && 
+                     ypoint >= 29 && ypoint <= 30 && volume >= 8 && !sw[6]) begin                                                                              
+                oled_data <= sw[5] ? colorViolet : colorYellow;                                                                                                                                    
+            end                                                                                                                                                             
+                                                                                          
+            else if (xpoint >= 43 + (barxpos - 7) * 5 && xpoint <= 51 + (barxpos - 7) * 5 && 
+                     ypoint >= 26 && ypoint <= 27 && volume >= 9 && !sw[6]) begin                                                                              
+                oled_data <= sw[5] ? colorViolet : colorYellow;                                                                                                                                    
+            end  
+            
+            else if (xpoint >= 43 + (barxpos - 7) * 5 && xpoint <= 51 + (barxpos - 7) * 5 && 
+                     ypoint >= 23 && ypoint <= 24 && volume >= 10 && !sw[6]) begin
+                oled_data <= sw[5] ? colorViolet : colorYellow;                                                          
+            end      
+            
+            else if (xpoint >= 43 + (barxpos - 7) * 5 && xpoint <= 51 + (barxpos - 7) * 5 && 
+                     ypoint >= 20 && ypoint <= 21 && volume >= 11 && !sw[6]) begin
+                oled_data <= sw[5] ? colorPink : colorRed;                                                                                                                                        
+            end 
+            
+            else if (xpoint >= 43 + (barxpos - 7) * 5 && xpoint <= 51 + (barxpos - 7) * 5 && 
+                     ypoint >= 17 && ypoint <= 18 && volume >= 12 && !sw[6]) begin
+                oled_data <= sw[5] ? colorPink : colorRed;                                                             
+            end   
+            
+            else if (xpoint >= 43 + (barxpos - 7) * 5 && xpoint <= 51 + (barxpos - 7) * 5 && 
+                     ypoint >= 14 && ypoint <= 15 && volume >= 13 && !sw[6]) begin
+                oled_data <= sw[5] ? colorPink : colorRed;                                                             
+            end   
+            
+            else if (xpoint >= 43 + (barxpos - 7) * 5 && xpoint <= 51 + (barxpos - 7) * 5 && 
+                     ypoint >= 11 && ypoint <= 12 && volume >= 14 && !sw[6]) begin
+                oled_data <= sw[5] ? colorPink : colorRed;                                                             
+            end 
+            
+            else if (xpoint >= 43 + (barxpos - 7) * 5 && xpoint <= 51 + (barxpos - 7) * 5 && 
+                     ypoint >= 8 && ypoint <= 9 && volume >= 15 && !sw[6]) begin
+                oled_data <= sw[5] ? colorPink : colorRed;                                                             
+            end 
+            
+            //Screen borders
+            else if (!(xpoint >= 1 && xpoint <= 94 && 
+                     ypoint >= 1 && ypoint <= 62) && !sw[4] && !sw[3]) begin
+                oled_data <= colorWhite;
+            end 
+            
+            else if (!(xpoint >= 3 && xpoint <= 92 && 
+                     ypoint >= 3 && ypoint <= 60) && !sw[4] && sw[3]) begin
+                oled_data <= colorWhite;
+            end                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+            
+            else begin
+                oled_data <= 0;
+            end
+        end
+    end
+    
+    always @ (posedge ctr21[14]) begin
+        segdisplayctr <= segdisplayctr + 1;
+        
+        case (segdisplayctr)
+            0: begin
+                anreg <= pause ? 15 : 7;
+                if (volume <= 5) begin
+                    segreg <= charL;
+                end
+                
+                else if (volume >= 11) begin
+                    segreg <= charH;  
+                end 
+                
+                else begin
+                    segreg <= charM;
+                end                  
+            end
+            
+            1: begin            
+                anreg <= 11;     
+                segreg <= 127;
+            end                 
+            
+            2: begin            
+                anreg <= pause ? 15 : 13;     
+                if (volume >= 10) begin
+                    segreg <= char1;
+                end
+                
+                else begin
+                    segreg <= char0;
+                end
+            end                 
+            
+            3: begin            
+                anreg <= pause ? 15 : 14;
+                case (volume)           
+                    0: begin            
+                        segreg <= char0;
+                    end                 
+                                        
+                    1: begin            
+                        segreg <= char1;
+                    end                 
+                                        
+                    2: begin            
+                        segreg <= char2;
+                    end                 
+                                        
+                    3: begin            
+                        segreg <= char3;
+                    end                 
+                                        
+                    4: begin            
+                        segreg <= char4;
+                    end                 
+                                        
+                    5: begin            
+                        segreg <= char5;
+                    end                 
+                                        
+                    6: begin            
+                        segreg <= char6;
+                    end                 
+                                        
+                    7: begin            
+                        segreg <= char7;
+                    end                 
+                                        
+                    8: begin            
+                        segreg <= char8;
+                    end                 
+                                        
+                    9: begin            
+                        segreg <= char9;
+                    end                 
+                                        
+                    10: begin           
+                        segreg <= char0;
+                    end                 
+                                        
+                    11: begin           
+                        segreg <= char1;
+                    end                 
+                                        
+                    12: begin           
+                        segreg <= char2;
+                    end                 
+                                        
+                    13: begin           
+                        segreg <= char3;
+                    end                 
+                                        
+                    14: begin           
+                        segreg <= char4;
+                    end                 
+                                        
+                    15: begin           
+                        segreg <= char5;
+                    end 
+                endcase                
+            end                 
+        endcase
     end
 endmodule

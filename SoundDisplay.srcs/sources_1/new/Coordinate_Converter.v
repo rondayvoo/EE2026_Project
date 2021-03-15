@@ -26,6 +26,6 @@ module Coordinate_Converter(
     output [5:0] ypos
     );
     
-    assign xpos = pxindex % 96;
-    assign ypos = pxindex / 96;
+    assign xpos = (pxindex + 1) % 96;
+    assign ypos = (pxindex + 1) / 96;
 endmodule

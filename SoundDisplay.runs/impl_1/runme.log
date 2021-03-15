@@ -1,6 +1,6 @@
 
 *** Running vivado
-    with args -log voicepong.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source voicepong.tcl -notrace
+    with args -log Top_Student.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source Top_Student.tcl -notrace
 
 
 ****** Vivado v2018.2 (64-bit)
@@ -8,234 +8,24 @@
   **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 
-source voicepong.tcl -notrace
-Command: link_design -top voicepong -part xc7a35tcpg236-1
+source Top_Student.tcl -notrace
+Command: link_design -top Top_Student -part xc7a35tcpg236-1
 Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
-INFO: [Netlist 29-17] Analyzing 143 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Netlist 29-17] Analyzing 60 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2018.2
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 Parsing XDC File [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc]
-WARNING: [Vivado 12-584] No ports matched 'sw[0]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:12]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:12]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[0]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:13]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:13]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[1]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:14]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:14]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[1]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:15]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:15]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[2]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:16]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:16]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[2]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:17]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:17]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[3]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:18]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:18]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[3]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:19]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:19]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[4]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:20]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:20]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[4]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:21]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:21]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[5]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:22]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:22]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[5]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:23]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:23]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[6]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:24]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:24]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[6]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:25]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:25]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[7]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:26]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:26]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[7]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:27]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:27]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[8]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:28]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:28]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[8]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:29]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:29]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[9]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:30]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:30]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[9]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:31]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:31]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[10]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:32]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:32]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[10]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:33]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:33]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[11]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:34]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:34]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[11]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:35]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:35]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[12]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:36]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:36]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[12]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:37]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:37]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[13]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:38]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:38]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[13]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:39]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:39]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[14]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:40]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:40]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[14]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:41]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:41]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[15]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:42]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:42]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[15]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:43]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:43]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[0]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:47]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:47]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[0]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:48]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:48]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[1]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:49]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:49]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[1]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:50]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:50]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[2]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:51]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:51]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[2]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:52]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:52]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[3]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:53]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:53]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[3]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:54]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:54]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[4]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:55]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:55]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[4]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:56]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:56]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[5]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:57]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:57]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[5]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:58]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:58]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[6]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:59]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:59]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[6]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:60]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:60]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[7]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:61]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:61]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[7]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:62]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:62]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[8]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:63]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:63]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[8]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:64]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:64]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[9]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:65]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:65]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[9]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:66]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:66]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[10]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:67]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:67]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[10]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:68]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:68]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[11]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:69]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:69]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[11]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:70]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:70]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[12]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:71]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:71]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[12]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:72]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:72]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[13]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:73]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:73]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[13]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:74]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:74]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[14]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:75]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:75]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[14]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:76]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:76]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[15]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:77]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:77]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[15]'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:78]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:78]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'J_MIC3_Pin1'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:126]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:126]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'J_MIC3_Pin1'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:127]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:127]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'J_MIC3_Pin3'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:132]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:132]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'J_MIC3_Pin3'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:133]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:133]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'J_MIC3_Pin4'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:135]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:135]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'J_MIC3_Pin4'. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:136]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:136]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 Finished Parsing XDC File [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc]
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-7 Infos, 70 Warnings, 70 Critical Warnings and 0 Errors encountered.
+7 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
-link_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 569.172 ; gain = 319.859
+link_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 567.766 ; gain = 319.160
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
@@ -246,91 +36,92 @@ INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.715 . Memory (MB): peak = 581.422 ; gain = 12.250
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 579.336 ; gain = 11.570
 
 Starting Cache Timing Information Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Cache Timing Information Task | Checksum: 14c00ac6c
+Ending Cache Timing Information Task | Checksum: 156fc1009
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 1135.621 ; gain = 554.199
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1136.613 ; gain = 557.277
 
 Starting Logic Optimization Task
 
 Phase 1 Retarget
 INFO: [Opt 31-138] Pushed 1 inverter(s) to 20 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: 1a9f143bc
+Phase 1 Retarget | Checksum: 13b1e4dd1
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.096 . Memory (MB): peak = 1135.621 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.141 . Memory (MB): peak = 1136.613 ; gain = 0.000
 INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
 
 Phase 2 Constant propagation
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Phase 2 Constant propagation | Checksum: 18db2721a
+Phase 2 Constant propagation | Checksum: 167e25d23
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.127 . Memory (MB): peak = 1135.621 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.199 . Memory (MB): peak = 1136.613 ; gain = 0.000
 INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
 
 Phase 3 Sweep
-Phase 3 Sweep | Checksum: 10da1b64a
+Phase 3 Sweep | Checksum: 1985df0bb
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.168 . Memory (MB): peak = 1135.621 ; gain = 0.000
-INFO: [Opt 31-389] Phase Sweep created 1 cells and removed 0 cells
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.297 . Memory (MB): peak = 1136.613 ; gain = 0.000
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
 
 Phase 4 BUFG optimization
-Phase 4 BUFG optimization | Checksum: 10da1b64a
+Phase 4 BUFG optimization | Checksum: 1985df0bb
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.211 . Memory (MB): peak = 1135.621 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.373 . Memory (MB): peak = 1136.613 ; gain = 0.000
 INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
 
 Phase 5 Shift Register Optimization
-Phase 5 Shift Register Optimization | Checksum: 118b63484
+Phase 5 Shift Register Optimization | Checksum: 1214f73d4
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.292 . Memory (MB): peak = 1135.621 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.443 . Memory (MB): peak = 1136.613 ; gain = 0.000
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Phase 6 Post Processing Netlist
-Phase 6 Post Processing Netlist | Checksum: 118b63484
+Phase 6 Post Processing Netlist | Checksum: 1214f73d4
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.298 . Memory (MB): peak = 1135.621 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.453 . Memory (MB): peak = 1136.613 ; gain = 0.000
 INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1135.621 ; gain = 0.000
-Ending Logic Optimization Task | Checksum: 118b63484
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1136.613 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 1214f73d4
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.306 . Memory (MB): peak = 1135.621 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.462 . Memory (MB): peak = 1136.613 ; gain = 0.000
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
-Ending Power Optimization Task | Checksum: 118b63484
+Ending Power Optimization Task | Checksum: 1214f73d4
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1135.621 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.044 . Memory (MB): peak = 1136.613 ; gain = 0.000
 
 Starting Final Cleanup Task
-Ending Final Cleanup Task | Checksum: 118b63484
+Ending Final Cleanup Task | Checksum: 1214f73d4
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1135.621 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1136.613 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
-23 Infos, 70 Warnings, 70 Critical Warnings and 0 Errors encountered.
+23 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1135.621 ; gain = 566.449
+opt_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1136.613 ; gain = 568.848
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.049 . Memory (MB): peak = 1135.621 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.runs/impl_1/voicepong_opt.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_drc -file voicepong_drc_opted.rpt -pb voicepong_drc_opted.pb -rpx voicepong_drc_opted.rpx
-Command: report_drc -file voicepong_drc_opted.rpt -pb voicepong_drc_opted.pb -rpx voicepong_drc_opted.rpx
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.085 . Memory (MB): peak = 1136.613 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.runs/impl_1/Top_Student_opt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file Top_Student_drc_opted.rpt -pb Top_Student_drc_opted.pb -rpx Top_Student_drc_opted.rpx
+Command: report_drc -file Top_Student_drc_opted.rpt -pb Top_Student_drc_opted.pb -rpx Top_Student_drc_opted.rpx
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
 INFO: [DRC 23-27] Running DRC with 2 threads
-INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.runs/impl_1/voicepong_drc_opted.rpt.
+INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.runs/impl_1/Top_Student_drc_opted.rpt.
 report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1136.613 ; gain = 0.000
 Command: place_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
@@ -348,43 +139,43 @@ INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1135.621 ; gain = 0.000
-Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 633fbe38
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1136.613 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 114560136
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1135.621 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1135.621 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 1136.613 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1136.613 ; gain = 0.000
 
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 13679b2ff
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 10b4b4e46
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1140.312 ; gain = 4.691
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1136.613 ; gain = 0.000
 
 Phase 1.3 Build Placer Netlist Model
-Phase 1.3 Build Placer Netlist Model | Checksum: 17ba666b6
+Phase 1.3 Build Placer Netlist Model | Checksum: 16dc3b4f8
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1140.312 ; gain = 4.691
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1136.613 ; gain = 0.000
 
 Phase 1.4 Constrain Clocks/Macros
-Phase 1.4 Constrain Clocks/Macros | Checksum: 17ba666b6
+Phase 1.4 Constrain Clocks/Macros | Checksum: 16dc3b4f8
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1140.312 ; gain = 4.691
-Phase 1 Placer Initialization | Checksum: 17ba666b6
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1136.613 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 16dc3b4f8
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1140.312 ; gain = 4.691
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1136.613 ; gain = 0.000
 
 Phase 2 Global Placement
 
 Phase 2.1 Floorplanning
-Phase 2.1 Floorplanning | Checksum: 230e630f5
+Phase 2.1 Floorplanning | Checksum: 1a08789c9
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1140.312 ; gain = 4.691
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1136.613 ; gain = 0.000
 
 Phase 2.2 Physical Synthesis In Placer
 INFO: [Physopt 32-65] No nets found for high-fanout optimization.
 INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1140.312 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1136.613 ; gain = 0.000
 
 Summary of Physical Synthesis Optimizations
 ============================================
@@ -398,52 +189,52 @@ Summary of Physical Synthesis Optimizations
 -----------------------------------------------------------------------------------------------------------------------------
 
 
-Phase 2.2 Physical Synthesis In Placer | Checksum: 213481abe
+Phase 2.2 Physical Synthesis In Placer | Checksum: 1286de5ec
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 1140.312 ; gain = 4.691
-Phase 2 Global Placement | Checksum: 1a54047c0
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 1136.613 ; gain = 0.000
+Phase 2 Global Placement | Checksum: 16dbb70cc
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 1140.312 ; gain = 4.691
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:08 . Memory (MB): peak = 1136.613 ; gain = 0.000
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 1a54047c0
+Phase 3.1 Commit Multi Column Macros | Checksum: 16dbb70cc
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 1140.312 ; gain = 4.691
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:08 . Memory (MB): peak = 1136.613 ; gain = 0.000
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 238aec942
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 23ddab8e6
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 1140.312 ; gain = 4.691
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:08 . Memory (MB): peak = 1136.613 ; gain = 0.000
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: 1ab8cf9cc
+Phase 3.3 Area Swap Optimization | Checksum: 209bb95a5
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 1140.312 ; gain = 4.691
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:08 . Memory (MB): peak = 1136.613 ; gain = 0.000
 
 Phase 3.4 Pipeline Register Optimization
-Phase 3.4 Pipeline Register Optimization | Checksum: 1ab8cf9cc
+Phase 3.4 Pipeline Register Optimization | Checksum: 209bb95a5
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 1140.312 ; gain = 4.691
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:08 . Memory (MB): peak = 1136.613 ; gain = 0.000
 
 Phase 3.5 Small Shape Detail Placement
-Phase 3.5 Small Shape Detail Placement | Checksum: 1c9d08c1c
+Phase 3.5 Small Shape Detail Placement | Checksum: 257527e48
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 1140.312 ; gain = 4.691
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:08 . Memory (MB): peak = 1136.613 ; gain = 0.000
 
 Phase 3.6 Re-assign LUT pins
-Phase 3.6 Re-assign LUT pins | Checksum: 178ae10a1
+Phase 3.6 Re-assign LUT pins | Checksum: 224201e77
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 1140.312 ; gain = 4.691
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:08 . Memory (MB): peak = 1136.613 ; gain = 0.000
 
 Phase 3.7 Pipeline Register Optimization
-Phase 3.7 Pipeline Register Optimization | Checksum: 178ae10a1
+Phase 3.7 Pipeline Register Optimization | Checksum: 224201e77
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 1140.312 ; gain = 4.691
-Phase 3 Detail Placement | Checksum: 178ae10a1
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:08 . Memory (MB): peak = 1136.613 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 224201e77
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 1140.312 ; gain = 4.691
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:08 . Memory (MB): peak = 1136.613 ; gain = 0.000
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -451,58 +242,58 @@ Phase 4.1 Post Commit Optimization
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 4.1.1 Post Placement Optimization
-Post Placement Optimization Initialization | Checksum: 1cdd3b7df
+Post Placement Optimization Initialization | Checksum: 1432d4449
 
 Phase 4.1.1.1 BUFG Insertion
 INFO: [Place 46-31] BUFG insertion identified 0 candidate nets, 0 success, 0 skipped for placement/routing, 0 skipped for timing, 0 skipped for netlist change reason.
-Phase 4.1.1.1 BUFG Insertion | Checksum: 1cdd3b7df
+Phase 4.1.1.1 BUFG Insertion | Checksum: 1432d4449
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1165.977 ; gain = 30.355
-INFO: [Place 30-746] Post Placement Timing Summary WNS=6.313. For the most accurate timing information please run report_timing.
-Phase 4.1.1 Post Placement Optimization | Checksum: 1c77c90a7
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 1162.367 ; gain = 25.754
+INFO: [Place 30-746] Post Placement Timing Summary WNS=5.625. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 6e318378
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1165.977 ; gain = 30.355
-Phase 4.1 Post Commit Optimization | Checksum: 1c77c90a7
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 1162.367 ; gain = 25.754
+Phase 4.1 Post Commit Optimization | Checksum: 6e318378
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1165.977 ; gain = 30.355
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 1162.367 ; gain = 25.754
 
 Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: 1c77c90a7
+Phase 4.2 Post Placement Cleanup | Checksum: 6e318378
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1165.977 ; gain = 30.355
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 1162.367 ; gain = 25.754
 
 Phase 4.3 Placer Reporting
-Phase 4.3 Placer Reporting | Checksum: 1c77c90a7
+Phase 4.3 Placer Reporting | Checksum: 6e318378
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1165.977 ; gain = 30.355
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 1162.367 ; gain = 25.754
 
 Phase 4.4 Final Placement Cleanup
-Phase 4.4 Final Placement Cleanup | Checksum: 1d1b69d25
+Phase 4.4 Final Placement Cleanup | Checksum: ac7ac11c
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1165.977 ; gain = 30.355
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1d1b69d25
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 1162.367 ; gain = 25.754
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: ac7ac11c
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1165.977 ; gain = 30.355
-Ending Placer Task | Checksum: dbf54239
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 1162.367 ; gain = 25.754
+Ending Placer Task | Checksum: 9e7779cd
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1165.977 ; gain = 30.355
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 1162.367 ; gain = 25.754
 INFO: [Common 17-83] Releasing license: Implementation
-47 Infos, 70 Warnings, 70 Critical Warnings and 0 Errors encountered.
+47 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 1165.977 ; gain = 30.355
+place_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:10 . Memory (MB): peak = 1162.367 ; gain = 25.754
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.127 . Memory (MB): peak = 1173.609 ; gain = 7.633
-INFO: [Common 17-1381] The checkpoint 'C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.runs/impl_1/voicepong_placed.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_io -file voicepong_io_placed.rpt
-report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.043 . Memory (MB): peak = 1173.609 ; gain = 0.000
-INFO: [runtcl-4] Executing : report_utilization -file voicepong_utilization_placed.rpt -pb voicepong_utilization_placed.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.042 . Memory (MB): peak = 1173.609 ; gain = 0.000
-INFO: [runtcl-4] Executing : report_control_sets -verbose -file voicepong_control_sets_placed.rpt
-report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1173.609 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.194 . Memory (MB): peak = 1169.984 ; gain = 7.617
+INFO: [Common 17-1381] The checkpoint 'C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.runs/impl_1/Top_Student_placed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_io -file Top_Student_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.151 . Memory (MB): peak = 1169.984 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file Top_Student_utilization_placed.rpt -pb Top_Student_utilization_placed.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.116 . Memory (MB): peak = 1169.984 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file Top_Student_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 1169.984 ; gain = 0.000
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
@@ -514,98 +305,105 @@ INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more in
 
 Starting Routing Task
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
-Checksum: PlaceDB: 14782607 ConstDB: 0 ShapeSum: c77d1c32 RouteDB: 0
+Checksum: PlaceDB: 4a6ffeda ConstDB: 0 ShapeSum: 54077af3 RouteDB: 0
 
 Phase 1 Build RT Design
-Phase 1 Build RT Design | Checksum: 191c59f72
+Phase 1 Build RT Design | Checksum: 11bc6d8c0
 
-Time (s): cpu = 00:00:22 ; elapsed = 00:00:20 . Memory (MB): peak = 1268.250 ; gain = 94.641
-Post Restoration Checksum: NetGraph: ab7deee3 NumContArr: e647b08f Constraints: 0 Timing: 0
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:26 . Memory (MB): peak = 1263.621 ; gain = 93.637
+Post Restoration Checksum: NetGraph: e0ac0f92 NumContArr: 3b1ac92e Constraints: 0 Timing: 0
 
 Phase 2 Router Initialization
 
 Phase 2.1 Create Timer
-Phase 2.1 Create Timer | Checksum: 191c59f72
+Phase 2.1 Create Timer | Checksum: 11bc6d8c0
 
-Time (s): cpu = 00:00:22 ; elapsed = 00:00:20 . Memory (MB): peak = 1268.262 ; gain = 94.652
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:26 . Memory (MB): peak = 1263.656 ; gain = 93.672
 
 Phase 2.2 Fix Topology Constraints
-Phase 2.2 Fix Topology Constraints | Checksum: 191c59f72
+Phase 2.2 Fix Topology Constraints | Checksum: 11bc6d8c0
 
-Time (s): cpu = 00:00:22 ; elapsed = 00:00:20 . Memory (MB): peak = 1274.301 ; gain = 100.691
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:26 . Memory (MB): peak = 1269.617 ; gain = 99.633
 
 Phase 2.3 Pre Route Cleanup
-Phase 2.3 Pre Route Cleanup | Checksum: 191c59f72
+Phase 2.3 Pre Route Cleanup | Checksum: 11bc6d8c0
 
-Time (s): cpu = 00:00:22 ; elapsed = 00:00:20 . Memory (MB): peak = 1274.301 ; gain = 100.691
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:26 . Memory (MB): peak = 1269.617 ; gain = 99.633
  Number of Nodes with overlaps = 0
 
 Phase 2.4 Update Timing
-Phase 2.4 Update Timing | Checksum: 1bf66f497
+Phase 2.4 Update Timing | Checksum: 20097fa55
 
-Time (s): cpu = 00:00:23 ; elapsed = 00:00:21 . Memory (MB): peak = 1280.258 ; gain = 106.648
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=6.073  | TNS=0.000  | WHS=-0.021 | THS=-0.176 |
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:27 . Memory (MB): peak = 1277.555 ; gain = 107.570
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=5.572  | TNS=0.000  | WHS=-0.130 | THS=-1.673 |
 
-Phase 2 Router Initialization | Checksum: 168abb36d
+Phase 2 Router Initialization | Checksum: 1e4c85fa3
 
-Time (s): cpu = 00:00:23 ; elapsed = 00:00:21 . Memory (MB): peak = 1280.258 ; gain = 106.648
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:27 . Memory (MB): peak = 1277.555 ; gain = 107.570
 
 Phase 3 Initial Routing
-Phase 3 Initial Routing | Checksum: 10f7fd7b3
+Phase 3 Initial Routing | Checksum: 1e501e236
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 1280.258 ; gain = 106.648
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:27 . Memory (MB): peak = 1277.555 ; gain = 107.570
 
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 67
+ Number of Nodes with overlaps = 43
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=6.073  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=5.178  | TNS=0.000  | WHS=N/A    | THS=N/A    |
 
-Phase 4.1 Global Iteration 0 | Checksum: 15ef1d42d
+Phase 4.1 Global Iteration 0 | Checksum: 1851cd8b8
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 1280.258 ; gain = 106.648
-Phase 4 Rip-up And Reroute | Checksum: 15ef1d42d
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:27 . Memory (MB): peak = 1277.555 ; gain = 107.570
+Phase 4 Rip-up And Reroute | Checksum: 1851cd8b8
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 1280.258 ; gain = 106.648
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:27 . Memory (MB): peak = 1277.555 ; gain = 107.570
 
 Phase 5 Delay and Skew Optimization
 
 Phase 5.1 Delay CleanUp
-Phase 5.1 Delay CleanUp | Checksum: 15ef1d42d
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 1280.258 ; gain = 106.648
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 1a0148e1a
+
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:27 . Memory (MB): peak = 1277.555 ; gain = 107.570
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=5.272  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 5.1 Delay CleanUp | Checksum: 1a0148e1a
+
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:27 . Memory (MB): peak = 1277.555 ; gain = 107.570
 
 Phase 5.2 Clock Skew Optimization
-Phase 5.2 Clock Skew Optimization | Checksum: 15ef1d42d
+Phase 5.2 Clock Skew Optimization | Checksum: 1a0148e1a
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 1280.258 ; gain = 106.648
-Phase 5 Delay and Skew Optimization | Checksum: 15ef1d42d
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:27 . Memory (MB): peak = 1277.555 ; gain = 107.570
+Phase 5 Delay and Skew Optimization | Checksum: 1a0148e1a
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 1280.258 ; gain = 106.648
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:27 . Memory (MB): peak = 1277.555 ; gain = 107.570
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Hold Fix Iter
 
 Phase 6.1.1 Update Timing
-Phase 6.1.1 Update Timing | Checksum: 1ce818f03
+Phase 6.1.1 Update Timing | Checksum: 196adbc48
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 1280.258 ; gain = 106.648
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=6.166  | TNS=0.000  | WHS=0.235  | THS=0.000  |
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:27 . Memory (MB): peak = 1277.555 ; gain = 107.570
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=5.272  | TNS=0.000  | WHS=0.057  | THS=0.000  |
 
-Phase 6.1 Hold Fix Iter | Checksum: 1ce818f03
+Phase 6.1 Hold Fix Iter | Checksum: 11565812e
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 1280.258 ; gain = 106.648
-Phase 6 Post Hold Fix | Checksum: 1ce818f03
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:27 . Memory (MB): peak = 1277.555 ; gain = 107.570
+Phase 6 Post Hold Fix | Checksum: 11565812e
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 1280.258 ; gain = 106.648
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:27 . Memory (MB): peak = 1277.555 ; gain = 107.570
 
 Phase 7 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 0.216296 %
-  Global Horizontal Routing Utilization  = 0.181156 %
+  Global Vertical Routing Utilization    = 0.13075 %
+  Global Horizontal Routing Utilization  = 0.109188 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -614,76 +412,76 @@ Router Utilization Summary
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
 
-Phase 7 Route finalize | Checksum: 1ce818f03
+Phase 7 Route finalize | Checksum: 18dda41f6
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 1280.258 ; gain = 106.648
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:27 . Memory (MB): peak = 1277.555 ; gain = 107.570
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
-Phase 8 Verifying routed nets | Checksum: 1ce818f03
+Phase 8 Verifying routed nets | Checksum: 18dda41f6
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 1280.258 ; gain = 106.648
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:27 . Memory (MB): peak = 1277.555 ; gain = 107.570
 
 Phase 9 Depositing Routes
-Phase 9 Depositing Routes | Checksum: 17f093e52
+Phase 9 Depositing Routes | Checksum: 163044e8b
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 1280.258 ; gain = 106.648
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:28 . Memory (MB): peak = 1277.555 ; gain = 107.570
 
 Phase 10 Post Router Timing
-INFO: [Route 35-57] Estimated Timing Summary | WNS=6.166  | TNS=0.000  | WHS=0.235  | THS=0.000  |
+INFO: [Route 35-57] Estimated Timing Summary | WNS=5.272  | TNS=0.000  | WHS=0.057  | THS=0.000  |
 
 INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
-Phase 10 Post Router Timing | Checksum: 17f093e52
+Phase 10 Post Router Timing | Checksum: 163044e8b
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 1280.258 ; gain = 106.648
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:28 . Memory (MB): peak = 1277.555 ; gain = 107.570
 INFO: [Route 35-16] Router Completed Successfully
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 1280.258 ; gain = 106.648
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:28 . Memory (MB): peak = 1277.555 ; gain = 107.570
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
-64 Infos, 70 Warnings, 70 Critical Warnings and 0 Errors encountered.
+65 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:22 . Memory (MB): peak = 1280.258 ; gain = 106.648
+route_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:29 . Memory (MB): peak = 1277.555 ; gain = 107.570
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.165 . Memory (MB): peak = 1280.258 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.runs/impl_1/voicepong_routed.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_drc -file voicepong_drc_routed.rpt -pb voicepong_drc_routed.pb -rpx voicepong_drc_routed.rpx
-Command: report_drc -file voicepong_drc_routed.rpt -pb voicepong_drc_routed.pb -rpx voicepong_drc_routed.rpx
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.160 . Memory (MB): peak = 1277.555 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.runs/impl_1/Top_Student_routed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file Top_Student_drc_routed.rpt -pb Top_Student_drc_routed.pb -rpx Top_Student_drc_routed.rpx
+Command: report_drc -file Top_Student_drc_routed.rpt -pb Top_Student_drc_routed.pb -rpx Top_Student_drc_routed.rpx
 INFO: [DRC 23-27] Running DRC with 2 threads
-INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.runs/impl_1/voicepong_drc_routed.rpt.
+INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.runs/impl_1/Top_Student_drc_routed.rpt.
 report_drc completed successfully
-INFO: [runtcl-4] Executing : report_methodology -file voicepong_methodology_drc_routed.rpt -pb voicepong_methodology_drc_routed.pb -rpx voicepong_methodology_drc_routed.rpx
-Command: report_methodology -file voicepong_methodology_drc_routed.rpt -pb voicepong_methodology_drc_routed.pb -rpx voicepong_methodology_drc_routed.rpx
+INFO: [runtcl-4] Executing : report_methodology -file Top_Student_methodology_drc_routed.rpt -pb Top_Student_methodology_drc_routed.pb -rpx Top_Student_methodology_drc_routed.rpx
+Command: report_methodology -file Top_Student_methodology_drc_routed.rpt -pb Top_Student_methodology_drc_routed.pb -rpx Top_Student_methodology_drc_routed.rpx
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [DRC 23-133] Running Methodology with 2 threads
-INFO: [Coretcl 2-1520] The results of Report Methodology are in file C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.runs/impl_1/voicepong_methodology_drc_routed.rpt.
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.runs/impl_1/Top_Student_methodology_drc_routed.rpt.
 report_methodology completed successfully
-INFO: [runtcl-4] Executing : report_power -file voicepong_power_routed.rpt -pb voicepong_power_summary_routed.pb -rpx voicepong_power_routed.rpx
-Command: report_power -file voicepong_power_routed.rpt -pb voicepong_power_summary_routed.pb -rpx voicepong_power_routed.rpx
+INFO: [runtcl-4] Executing : report_power -file Top_Student_power_routed.rpt -pb Top_Student_power_summary_routed.pb -rpx Top_Student_power_routed.rpx
+Command: report_power -file Top_Student_power_routed.rpt -pb Top_Student_power_summary_routed.pb -rpx Top_Student_power_routed.rpx
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 Running Vector-less Activity Propagation...
 
 Finished Running Vector-less Activity Propagation
-76 Infos, 70 Warnings, 70 Critical Warnings and 0 Errors encountered.
+77 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 report_power completed successfully
-INFO: [runtcl-4] Executing : report_route_status -file voicepong_route_status.rpt -pb voicepong_route_status.pb
-INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file voicepong_timing_summary_routed.rpt -pb voicepong_timing_summary_routed.pb -rpx voicepong_timing_summary_routed.rpx -warn_on_violation 
+INFO: [runtcl-4] Executing : report_route_status -file Top_Student_route_status.rpt -pb Top_Student_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file Top_Student_timing_summary_routed.rpt -pb Top_Student_timing_summary_routed.pb -rpx Top_Student_timing_summary_routed.rpx -warn_on_violation 
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max, Timing Stage: Requireds.
 INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
-INFO: [runtcl-4] Executing : report_incremental_reuse -file voicepong_incremental_reuse_routed.rpt
+INFO: [runtcl-4] Executing : report_incremental_reuse -file Top_Student_incremental_reuse_routed.rpt
 INFO: [Vivado_Tcl 4-545] No incremental reuse to report, no incremental placement and routing data was found.
-INFO: [runtcl-4] Executing : report_clock_utilization -file voicepong_clock_utilization_routed.rpt
-INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file voicepong_bus_skew_routed.rpt -pb voicepong_bus_skew_routed.pb -rpx voicepong_bus_skew_routed.rpx
+INFO: [runtcl-4] Executing : report_clock_utilization -file Top_Student_clock_utilization_routed.rpt
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file Top_Student_bus_skew_routed.rpt -pb Top_Student_bus_skew_routed.pb -rpx Top_Student_bus_skew_routed.rpx
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max, Timing Stage: Requireds.
 INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
-Command: write_bitstream -force voicepong.bit
+Command: write_bitstream -force Top_Student.bit
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
 Running DRC as a precondition to command write_bitstream
@@ -706,11 +504,11 @@ Loading route data...
 Processing options...
 Creating bitmap...
 Creating bitstream...
-Writing bitstream ./voicepong.bit...
+Writing bitstream ./Top_Student.bit...
 INFO: [Vivado 12-1842] Bitgen Completed Successfully.
 INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
 INFO: [Common 17-83] Releasing license: Implementation
-94 Infos, 71 Warnings, 70 Critical Warnings and 0 Errors encountered.
+95 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:14 ; elapsed = 00:00:13 . Memory (MB): peak = 1712.852 ; gain = 400.293
-INFO: [Common 17-206] Exiting Vivado at Sat Mar 13 02:27:27 2021...
+write_bitstream: Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1711.566 ; gain = 402.027
+INFO: [Common 17-206] Exiting Vivado at Mon Mar 15 14:46:06 2021...
