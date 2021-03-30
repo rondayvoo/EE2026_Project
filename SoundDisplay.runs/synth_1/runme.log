@@ -14,9 +14,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 7436 
+INFO: Helper process launched with PID 11084 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 356.945 ; gain = 99.953
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 356.762 ; gain = 100.555
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Top_Student' [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:18]
 INFO: [Synth 8-6157] synthesizing module 'SPO' [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/SPO.v:23]
@@ -25,30 +25,42 @@ INFO: [Synth 8-6155] done synthesizing module 'dFlip' (1#1) [C:/Users/rondayvoo/
 INFO: [Synth 8-6155] done synthesizing module 'SPO' (2#1) [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/SPO.v:23]
 INFO: [Synth 8-6157] synthesizing module 'Coordinate_Converter' [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/Coordinate_Converter.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'Coordinate_Converter' (3#1) [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/Coordinate_Converter.v:23]
+INFO: [Synth 8-6157] synthesizing module 'slowmax' [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/slowmax.v:23]
+WARNING: [Synth 8-6014] Unused sequential element final_reg was removed.  [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/slowmax.v:64]
+INFO: [Synth 8-6155] done synthesizing module 'slowmax' (4#1) [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/slowmax.v:23]
 INFO: [Synth 8-6157] synthesizing module 'mainmenu' [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/mainmenu.v:22]
 INFO: [Synth 8-3876] $readmem data file 'menudata.txt' is read successfully [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/mainmenu.v:53]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/mainmenu.v:85]
-WARNING: [Synth 8-6014] Unused sequential element inputwait_reg was removed.  [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/mainmenu.v:80]
-INFO: [Synth 8-6155] done synthesizing module 'mainmenu' (4#1) [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/mainmenu.v:22]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/mainmenu.v:92]
+INFO: [Synth 8-6155] done synthesizing module 'mainmenu' (5#1) [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/mainmenu.v:22]
 INFO: [Synth 8-6157] synthesizing module 'volumebar' [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/volumebar.v:3]
-INFO: [Synth 8-3876] $readmem data file 'pausedata.txt' is read successfully [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/volumebar.v:73]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/volumebar.v:152]
-WARNING: [Synth 8-6014] Unused sequential element ctr6p25m_reg was removed.  [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/volumebar.v:79]
-WARNING: [Synth 8-6014] Unused sequential element clk6p25m_reg was removed.  [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/volumebar.v:80]
-INFO: [Synth 8-6155] done synthesizing module 'volumebar' (5#1) [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/volumebar.v:3]
+INFO: [Synth 8-3876] $readmem data file 'pausedata.txt' is read successfully [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/volumebar.v:77]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/volumebar.v:175]
+WARNING: [Synth 8-6014] Unused sequential element ctr6p25m_reg was removed.  [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/volumebar.v:81]
+WARNING: [Synth 8-6014] Unused sequential element clk6p25m_reg was removed.  [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/volumebar.v:82]
+INFO: [Synth 8-6155] done synthesizing module 'volumebar' (6#1) [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/volumebar.v:3]
+INFO: [Synth 8-6157] synthesizing module 'waveform' [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/waveform.v:23]
+INFO: [Synth 8-3876] $readmem data file 'pausedata.txt' is read successfully [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/waveform.v:54]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/waveform.v:122]
+INFO: [Synth 8-6155] done synthesizing module 'waveform' (7#1) [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/waveform.v:23]
 INFO: [Synth 8-6157] synthesizing module 'voicepong' [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/voicepong.v:23]
-INFO: [Synth 8-3876] $readmem data file 'pausedata.txt' is read successfully [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/voicepong.v:72]
-INFO: [Synth 8-3876] $readmem data file 'gameover.txt' is read successfully [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/voicepong.v:74]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/voicepong.v:307]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/voicepong.v:346]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/voicepong.v:377]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/voicepong.v:411]
-INFO: [Synth 8-6155] done synthesizing module 'voicepong' (6#1) [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/voicepong.v:23]
+INFO: [Synth 8-3876] $readmem data file 'pausedata.txt' is read successfully [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/voicepong.v:74]
+INFO: [Synth 8-3876] $readmem data file 'gameover.txt' is read successfully [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/voicepong.v:76]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/voicepong.v:292]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/voicepong.v:331]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/voicepong.v:362]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/voicepong.v:396]
+INFO: [Synth 8-6155] done synthesizing module 'voicepong' (8#1) [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/voicepong.v:23]
 INFO: [Synth 8-6157] synthesizing module 'solidsnake' [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/solidsnake.v:23]
-INFO: [Synth 8-3876] $readmem data file 'pausedata.txt' is read successfully [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/solidsnake.v:64]
-INFO: [Synth 8-3876] $readmem data file 'gameover.txt' is read successfully [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/solidsnake.v:66]
-WARNING: [Synth 8-6014] Unused sequential element commandline_reg was removed.  [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/solidsnake.v:85]
-INFO: [Synth 8-6155] done synthesizing module 'solidsnake' (7#1) [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/solidsnake.v:23]
+INFO: [Synth 8-3876] $readmem data file 'pausedata.txt' is read successfully [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/solidsnake.v:77]
+INFO: [Synth 8-3876] $readmem data file 'gameover.txt' is read successfully [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/solidsnake.v:79]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/solidsnake.v:298]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/solidsnake.v:332]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/solidsnake.v:401]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/solidsnake.v:446]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/solidsnake.v:491]
+INFO: [Synth 8-6155] done synthesizing module 'solidsnake' (9#1) [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/solidsnake.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Audio_Capture' [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/Audio_Capture.v:25]
+INFO: [Synth 8-6155] done synthesizing module 'Audio_Capture' (10#1) [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/Audio_Capture.v:25]
 INFO: [Synth 8-6157] synthesizing module 'Oled_Display' [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/Oled_Display.v:36]
 	Parameter Width bound to: 96 - type: integer 
 	Parameter Height bound to: 64 - type: integer 
@@ -103,26 +115,60 @@ INFO: [Synth 8-6157] synthesizing module 'Oled_Display' [C:/Users/rondayvoo/Docu
 INFO: [Synth 8-226] default block is never used [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/Oled_Display.v:124]
 INFO: [Synth 8-226] default block is never used [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/Oled_Display.v:201]
 WARNING: [Synth 8-693] zero replication count - replication ignored [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/Oled_Display.v:349]
-INFO: [Synth 8-6155] done synthesizing module 'Oled_Display' (8#1) [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/Oled_Display.v:36]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:142]
-WARNING: [Synth 8-6014] Unused sequential element ctr20k_reg was removed.  [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:132]
-WARNING: [Synth 8-6014] Unused sequential element clk20k_reg was removed.  [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:133]
-WARNING: [Synth 8-3848] Net J_MIC3_Pin1 in module/entity Top_Student does not have driver. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:21]
-WARNING: [Synth 8-3848] Net J_MIC3_Pin4 in module/entity Top_Student does not have driver. [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:22]
-INFO: [Synth 8-6155] done synthesizing module 'Top_Student' (9#1) [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:18]
+INFO: [Synth 8-6155] done synthesizing module 'Oled_Display' (11#1) [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/Oled_Display.v:36]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:153]
+INFO: [Synth 8-6155] done synthesizing module 'Top_Student' (12#1) [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:18]
 WARNING: [Synth 8-3917] design Top_Student has port dp driven by constant 1
 WARNING: [Synth 8-3331] design solidsnake has unconnected port btnC
 WARNING: [Synth 8-3331] design solidsnake has unconnected port btnD
-WARNING: [Synth 8-3331] design solidsnake has unconnected port btnL
-WARNING: [Synth 8-3331] design solidsnake has unconnected port btnR
 WARNING: [Synth 8-3331] design solidsnake has unconnected port btnU
-WARNING: [Synth 8-3331] design solidsnake has unconnected port dbounceC
-WARNING: [Synth 8-3331] design solidsnake has unconnected port globalreset
+WARNING: [Synth 8-3331] design voicepong has unconnected port sw[15]
+WARNING: [Synth 8-3331] design voicepong has unconnected port sw[14]
+WARNING: [Synth 8-3331] design voicepong has unconnected port sw[13]
+WARNING: [Synth 8-3331] design voicepong has unconnected port sw[12]
+WARNING: [Synth 8-3331] design voicepong has unconnected port sw[11]
+WARNING: [Synth 8-3331] design voicepong has unconnected port sw[10]
+WARNING: [Synth 8-3331] design voicepong has unconnected port sw[9]
+WARNING: [Synth 8-3331] design voicepong has unconnected port sw[8]
+WARNING: [Synth 8-3331] design voicepong has unconnected port sw[7]
+WARNING: [Synth 8-3331] design voicepong has unconnected port sw[6]
+WARNING: [Synth 8-3331] design voicepong has unconnected port sw[5]
+WARNING: [Synth 8-3331] design voicepong has unconnected port sw[4]
+WARNING: [Synth 8-3331] design voicepong has unconnected port sw[3]
+WARNING: [Synth 8-3331] design voicepong has unconnected port sw[2]
+WARNING: [Synth 8-3331] design voicepong has unconnected port sw[1]
 WARNING: [Synth 8-3331] design voicepong has unconnected port btnC
 WARNING: [Synth 8-3331] design voicepong has unconnected port btnD
 WARNING: [Synth 8-3331] design voicepong has unconnected port btnU
 WARNING: [Synth 8-3331] design voicepong has unconnected port dbounceL
 WARNING: [Synth 8-3331] design voicepong has unconnected port dbounceR
+WARNING: [Synth 8-3331] design waveform has unconnected port mic_in[6]
+WARNING: [Synth 8-3331] design waveform has unconnected port mic_in[5]
+WARNING: [Synth 8-3331] design waveform has unconnected port mic_in[4]
+WARNING: [Synth 8-3331] design waveform has unconnected port mic_in[3]
+WARNING: [Synth 8-3331] design waveform has unconnected port mic_in[2]
+WARNING: [Synth 8-3331] design waveform has unconnected port mic_in[1]
+WARNING: [Synth 8-3331] design waveform has unconnected port mic_in[0]
+WARNING: [Synth 8-3331] design waveform has unconnected port sw[15]
+WARNING: [Synth 8-3331] design waveform has unconnected port sw[14]
+WARNING: [Synth 8-3331] design waveform has unconnected port sw[13]
+WARNING: [Synth 8-3331] design waveform has unconnected port sw[12]
+WARNING: [Synth 8-3331] design waveform has unconnected port sw[11]
+WARNING: [Synth 8-3331] design waveform has unconnected port sw[10]
+WARNING: [Synth 8-3331] design waveform has unconnected port sw[9]
+WARNING: [Synth 8-3331] design waveform has unconnected port sw[8]
+WARNING: [Synth 8-3331] design waveform has unconnected port sw[7]
+WARNING: [Synth 8-3331] design waveform has unconnected port sw[6]
+WARNING: [Synth 8-3331] design waveform has unconnected port sw[5]
+WARNING: [Synth 8-3331] design waveform has unconnected port sw[4]
+WARNING: [Synth 8-3331] design waveform has unconnected port sw[3]
+WARNING: [Synth 8-3331] design waveform has unconnected port sw[2]
+WARNING: [Synth 8-3331] design waveform has unconnected port btnC
+WARNING: [Synth 8-3331] design waveform has unconnected port btnD
+WARNING: [Synth 8-3331] design waveform has unconnected port btnU
+WARNING: [Synth 8-3331] design waveform has unconnected port dbounceL
+WARNING: [Synth 8-3331] design waveform has unconnected port dbounceR
+WARNING: [Synth 8-3331] design waveform has unconnected port globalreset
 WARNING: [Synth 8-3331] design volumebar has unconnected port sw[15]
 WARNING: [Synth 8-3331] design volumebar has unconnected port sw[14]
 WARNING: [Synth 8-3331] design volumebar has unconnected port sw[13]
@@ -133,8 +179,6 @@ WARNING: [Synth 8-3331] design volumebar has unconnected port sw[9]
 WARNING: [Synth 8-3331] design volumebar has unconnected port sw[8]
 WARNING: [Synth 8-3331] design volumebar has unconnected port sw[7]
 WARNING: [Synth 8-3331] design volumebar has unconnected port sw[2]
-WARNING: [Synth 8-3331] design volumebar has unconnected port sw[1]
-WARNING: [Synth 8-3331] design volumebar has unconnected port sw[0]
 WARNING: [Synth 8-3331] design volumebar has unconnected port btnC
 WARNING: [Synth 8-3331] design volumebar has unconnected port btnD
 WARNING: [Synth 8-3331] design volumebar has unconnected port btnU
@@ -145,12 +189,9 @@ WARNING: [Synth 8-3331] design mainmenu has unconnected port btnR
 WARNING: [Synth 8-3331] design mainmenu has unconnected port btnU
 WARNING: [Synth 8-3331] design mainmenu has unconnected port dbounceL
 WARNING: [Synth 8-3331] design mainmenu has unconnected port dbounceR
-WARNING: [Synth 8-3331] design Top_Student has unconnected port J_MIC3_Pin1
-WARNING: [Synth 8-3331] design Top_Student has unconnected port J_MIC3_Pin4
 WARNING: [Synth 8-3331] design Top_Student has unconnected port JDisplay[2]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port J_MIC3_Pin3
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 444.605 ; gain = 187.613
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 464.441 ; gain = 208.234
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -163,10 +204,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 444.605 ; gain = 187.613
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 464.441 ; gain = 208.234
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 444.605 ; gain = 187.613
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 464.441 ; gain = 208.234
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -182,49 +223,51 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 803.617 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 873.293 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:26 ; elapsed = 00:00:32 . Memory (MB): peak = 803.902 ; gain = 546.910
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 873.566 ; gain = 617.359
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:26 ; elapsed = 00:00:32 . Memory (MB): peak = 803.902 ; gain = 546.910
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 873.566 ; gain = 617.359
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:32 . Memory (MB): peak = 803.902 ; gain = 546.910
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 873.566 ; gain = 617.359
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "max" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "max" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/mainmenu.v:66]
 INFO: [Synth 8-5544] ROM "oled_data" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/volumebar.v:123]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/volumebar.v:90]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/volumebar.v:98]
+INFO: [Synth 8-5544] ROM "oled_data" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/volumebar.v:147]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/volumebar.v:122]
 INFO: [Synth 8-5546] ROM "pausectr" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "ledreg0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ledpause0" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "oled_data" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "anreg0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "anreg0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "anreg0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/voicepong.v:101]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/voicepong.v:169]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/voicepong.v:291]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/waveform.v:96]
 INFO: [Synth 8-5546] ROM "pausectr" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "ledreg0" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "comScore" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "scoreWait" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "playerScore" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "oled_data" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/voicepong.v:226]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/voicepong.v:276]
+INFO: [Synth 8-5546] ROM "pausectr" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ledreg0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ballXvel" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "lastPlayerWin" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "oled_data" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "oled_data" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "pausectr" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "ledreg0" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "comScore" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "scoreWait" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "playerScore" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ballXvel" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "lastPlayerWin" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "oled_data" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "oled_data" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "pausectr" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
@@ -233,10 +276,30 @@ INFO: [Synth 8-5544] ROM "anreg0" won't be mapped to Block RAM because address s
 INFO: [Synth 8-5544] ROM "anreg0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "segreg" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "segreg" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "pausectr" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ledreg0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "oled_data" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "oled_data" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "segreg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "segreg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "segreg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "pausectr" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ledreg0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "oled_data" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "oled_data" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "segreg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "segreg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "segreg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "pelletxpos" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "lastdir" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "pausectr" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "oled_data" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "anreg" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Oled_Display'
 INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "fsm_next_state0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "clk20k0" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "ledreg" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
@@ -276,76 +339,103 @@ INFO: [Synth 8-5544] ROM "ledreg" won't be mapped to Block RAM because address s
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'Oled_Display'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:32 ; elapsed = 00:00:38 . Memory (MB): peak = 803.902 ; gain = 546.910
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 873.566 ; gain = 617.359
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
++------+------------------+------------+----------+
+|      |RTL Partition     |Replication |Instances |
++------+------------------+------------+----------+
+|1     |solidsnake__GB0   |           1|     19319|
+|2     |datapath__91__GD  |           1|      8279|
+|3     |datapath__90__GD  |           1|      8279|
+|4     |solidsnake__GB3   |           1|     16521|
+|5     |solidsnake__GB4   |           1|     34191|
+|6     |Top_Student__GCB0 |           1|     26854|
+|7     |Top_Student__GCB1 |           1|      9144|
++------+------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-3538] Detected potentially large (wide) register snakemap_reg [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/solidsnake.v:114]
+INFO: [Synth 8-3538] Detected potentially large (wide) register commandline_reg [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/solidsnake.v:116]
 Detailed RTL Component Info : 
 +---Adders : 
+	   2 Input   2760 Bit       Adders := 3     
+	   2 Input    485 Bit       Adders := 1     
 	   2 Input     32 Bit       Adders := 13    
-	   2 Input     21 Bit       Adders := 2     
+	   2 Input     24 Bit       Adders := 1     
+	   2 Input     21 Bit       Adders := 4     
 	   2 Input     17 Bit       Adders := 1     
-	   2 Input     16 Bit       Adders := 2     
+	   2 Input     16 Bit       Adders := 4     
 	   2 Input     14 Bit       Adders := 1     
-	   2 Input     13 Bit       Adders := 2     
+	   2 Input     13 Bit       Adders := 1     
+	   2 Input     12 Bit       Adders := 3     
 	   2 Input      8 Bit       Adders := 1     
-	   2 Input      7 Bit       Adders := 5     
-	   2 Input      6 Bit       Adders := 5     
-	   2 Input      4 Bit       Adders := 8     
+	   2 Input      7 Bit       Adders := 7     
+	   2 Input      6 Bit       Adders := 7     
+	   2 Input      4 Bit       Adders := 13    
 	   2 Input      3 Bit       Adders := 3     
-	   2 Input      2 Bit       Adders := 2     
+	   2 Input      2 Bit       Adders := 3     
 +---Registers : 
-	             6144 Bit    Registers := 1     
+	             2760 Bit    Registers := 1     
 	               40 Bit    Registers := 1     
-	               21 Bit    Registers := 2     
+	               24 Bit    Registers := 1     
+	               21 Bit    Registers := 4     
 	               17 Bit    Registers := 1     
-	               16 Bit    Registers := 8     
-	                7 Bit    Registers := 5     
-	                6 Bit    Registers := 4     
-	                4 Bit    Registers := 14    
+	               16 Bit    Registers := 13    
+	               13 Bit    Registers := 1     
+	               12 Bit    Registers := 4     
+	                7 Bit    Registers := 8     
+	                6 Bit    Registers := 6     
+	                4 Bit    Registers := 19    
 	                3 Bit    Registers := 3     
-	                2 Bit    Registers := 3     
-	                1 Bit    Registers := 45    
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 53    
 +---Multipliers : 
 	                 3x32  Multipliers := 1     
 +---Muxes : 
+	   4 Input   2760 Bit        Muxes := 1     
+	   2 Input   1536 Bit        Muxes := 2     
 	   2 Input     40 Bit        Muxes := 3     
 	  32 Input     32 Bit        Muxes := 1     
 	   2 Input     32 Bit        Muxes := 2     
-	   2 Input     21 Bit        Muxes := 2     
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input     21 Bit        Muxes := 4     
 	  32 Input     20 Bit        Muxes := 1     
 	   2 Input     17 Bit        Muxes := 1     
-	   2 Input     16 Bit        Muxes := 40    
-	   4 Input     16 Bit        Muxes := 3     
-	   3 Input     16 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 61    
+	   4 Input     16 Bit        Muxes := 5     
+	   5 Input     16 Bit        Muxes := 1     
+	  16 Input     16 Bit        Muxes := 1     
+	   2 Input     15 Bit        Muxes := 1     
+	   2 Input     13 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 2     
 	   2 Input     11 Bit        Muxes := 1     
-	   3 Input      7 Bit        Muxes := 2     
-	  19 Input      7 Bit        Muxes := 1     
-	   2 Input      7 Bit        Muxes := 3     
-	  16 Input      7 Bit        Muxes := 1     
+	   3 Input      7 Bit        Muxes := 3     
+	  14 Input      7 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 15    
 	   4 Input      7 Bit        Muxes := 1     
+	  19 Input      7 Bit        Muxes := 1     
+	  16 Input      7 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 20    
 	   4 Input      6 Bit        Muxes := 1     
 	  32 Input      6 Bit        Muxes := 1     
-	   2 Input      6 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 7     
 	  32 Input      5 Bit        Muxes := 2     
-	   2 Input      4 Bit        Muxes := 6     
-	   4 Input      4 Bit        Muxes := 2     
-	   2 Input      2 Bit        Muxes := 8     
-	   2 Input      1 Bit        Muxes := 60    
-	   4 Input      1 Bit        Muxes := 2     
-	   5 Input      1 Bit        Muxes := 2     
-	   3 Input      1 Bit        Muxes := 5     
-	  16 Input      1 Bit        Muxes := 1     
-	   8 Input      1 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 4     
+	   2 Input      4 Bit        Muxes := 13    
+	  16 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 10    
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 106   
+	  11 Input      1 Bit        Muxes := 2     
+	  14 Input      1 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 2     
+	   5 Input      1 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 4     
+	   3 Input      1 Bit        Muxes := 4     
+	  16 Input      1 Bit        Muxes := 2     
 	   6 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -353,22 +443,99 @@ Finished RTL Component Statistics
 ---------------------------------------------------------------------------------
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-3538] Detected potentially large (wide) register snakemap_reg [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/solidsnake.v:114]
+INFO: [Synth 8-3538] Detected potentially large (wide) register commandline_reg [C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.srcs/sources_1/new/solidsnake.v:116]
 Hierarchical RTL Component report 
 Module Top_Student 
 Detailed RTL Component Info : 
 +---Adders : 
+	   2 Input     12 Bit       Adders := 1     
 	   2 Input      3 Bit       Adders := 1     
 +---Registers : 
 	               16 Bit    Registers := 2     
+	               12 Bit    Registers := 1     
 	                7 Bit    Registers := 1     
 	                4 Bit    Registers := 2     
 	                3 Bit    Registers := 1     
-	                1 Bit    Registers := 2     
+	                1 Bit    Registers := 3     
 +---Muxes : 
-	   2 Input      1 Bit        Muxes := 8     
+	   2 Input     12 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 10    
 	   6 Input      1 Bit        Muxes := 1     
-Module dFlip 
+Module dFlip__1 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module dFlip__2 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module dFlip__3 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module dFlip__4 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module solidsnake 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   2760 Bit       Adders := 3     
+	   2 Input     21 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input     13 Bit       Adders := 1     
+	   2 Input     12 Bit       Adders := 2     
+	   2 Input      7 Bit       Adders := 4     
+	   2 Input      6 Bit       Adders := 4     
+	   2 Input      4 Bit       Adders := 3     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	             2760 Bit    Registers := 1     
+	               21 Bit    Registers := 1     
+	               16 Bit    Registers := 2     
+	               13 Bit    Registers := 1     
+	                7 Bit    Registers := 4     
+	                6 Bit    Registers := 3     
+	                4 Bit    Registers := 3     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   4 Input   2760 Bit        Muxes := 1     
+	   2 Input   1536 Bit        Muxes := 2     
+	   2 Input     21 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 10    
+	   4 Input     16 Bit        Muxes := 1     
+	   5 Input     16 Bit        Muxes := 1     
+	   2 Input     13 Bit        Muxes := 1     
+	   3 Input      7 Bit        Muxes := 1     
+	  14 Input      7 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 12    
+	   4 Input      7 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 19    
+	   4 Input      6 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 3     
+	   2 Input      2 Bit        Muxes := 5     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 29    
+	  11 Input      1 Bit        Muxes := 2     
+	  14 Input      1 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 2     
+Module dFlip__5 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module dFlip__6 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module dFlip__7 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module dFlip__12 
 Detailed RTL Component Info : 
 +---Registers : 
 	                1 Bit    Registers := 1     
@@ -386,31 +553,34 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   2 Input     16 Bit        Muxes := 5     
 	   4 Input     16 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 3     
+	   2 Input      4 Bit        Muxes := 2     
+	   4 Input      4 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 4     
-	   4 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	   4 Input      1 Bit        Muxes := 2     
 Module volumebar 
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     32 Bit       Adders := 3     
 	   2 Input     21 Bit       Adders := 1     
 	   2 Input     16 Bit       Adders := 1     
-	   2 Input      4 Bit       Adders := 3     
+	   2 Input      4 Bit       Adders := 2     
 	   2 Input      2 Bit       Adders := 1     
 +---Registers : 
 	               21 Bit    Registers := 1     
-	               16 Bit    Registers := 2     
+	               16 Bit    Registers := 4     
 	                7 Bit    Registers := 1     
-	                4 Bit    Registers := 5     
+	                4 Bit    Registers := 4     
 	                2 Bit    Registers := 1     
 	                1 Bit    Registers := 2     
 +---Multipliers : 
 	                 3x32  Multipliers := 1     
 +---Muxes : 
 	   2 Input     21 Bit        Muxes := 1     
-	   2 Input     16 Bit        Muxes := 25    
+	   2 Input     16 Bit        Muxes := 27    
+	  16 Input     16 Bit        Muxes := 1     
 	   4 Input     16 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 1     
 	   2 Input     11 Bit        Muxes := 1     
 	   3 Input      7 Bit        Muxes := 1     
 	  19 Input      7 Bit        Muxes := 1     
@@ -419,6 +589,22 @@ Detailed RTL Component Info :
 	   2 Input      2 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 10    
 	   5 Input      1 Bit        Muxes := 1     
+Module dFlip__11 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module dFlip__10 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module dFlip__9 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module dFlip__8 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
 Module voicepong 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -428,7 +614,7 @@ Detailed RTL Component Info :
 	   2 Input      8 Bit       Adders := 1     
 	   2 Input      7 Bit       Adders := 3     
 	   2 Input      6 Bit       Adders := 2     
-	   2 Input      4 Bit       Adders := 4     
+	   2 Input      4 Bit       Adders := 6     
 	   2 Input      3 Bit       Adders := 2     
 	   2 Input      2 Bit       Adders := 1     
 +---Registers : 
@@ -448,33 +634,15 @@ Detailed RTL Component Info :
 	   3 Input      7 Bit        Muxes := 1     
 	  16 Input      7 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 2     
-	   2 Input      4 Bit        Muxes := 3     
+	   2 Input      4 Bit        Muxes := 8     
 	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 4     
 	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 33    
-	   3 Input      1 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 42    
+	   3 Input      1 Bit        Muxes := 4     
 	   5 Input      1 Bit        Muxes := 1     
 	  16 Input      1 Bit        Muxes := 1     
 	   8 Input      1 Bit        Muxes := 1     
-Module solidsnake 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     13 Bit       Adders := 2     
-	   2 Input      7 Bit       Adders := 2     
-	   2 Input      6 Bit       Adders := 2     
-+---Registers : 
-	             6144 Bit    Registers := 1     
-	               16 Bit    Registers := 1     
-	                7 Bit    Registers := 1     
-	                6 Bit    Registers := 1     
-	                2 Bit    Registers := 1     
-+---Muxes : 
-	   3 Input     16 Bit        Muxes := 1     
-	   4 Input      7 Bit        Muxes := 1     
-	   4 Input      6 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 4     
-	   2 Input      1 Bit        Muxes := 3     
-	   4 Input      1 Bit        Muxes := 1     
 Module Oled_Display 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -495,6 +663,124 @@ Detailed RTL Component Info :
 	   2 Input      5 Bit        Muxes := 2     
 	  32 Input      5 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 2     
+Module Audio_Capture 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
+Module waveform 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    485 Bit       Adders := 1     
+	   2 Input     21 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               21 Bit    Registers := 1     
+	               16 Bit    Registers := 2     
+	                4 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     21 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 9     
+	   4 Input     16 Bit        Muxes := 1     
+	   2 Input     15 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 9     
+	   5 Input      1 Bit        Muxes := 1     
+Module slowmax 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     24 Bit       Adders := 1     
++---Registers : 
+	               24 Bit    Registers := 1     
+	               12 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 1     
+	  16 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+	  16 Input      1 Bit        Muxes := 1     
+Module dFlip__19 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module dFlip__18 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module dFlip__17 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module dFlip__16 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module dFlip__23 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module dFlip__22 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module dFlip__21 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module dFlip__20 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module dFlip__27 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module dFlip__26 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module dFlip__25 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module dFlip__24 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module dFlip__31 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module dFlip__30 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module dFlip__29 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module dFlip__28 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module dFlip__13 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module dFlip__14 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module dFlip__15 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module dFlip 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -511,310 +797,100 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-5546] ROM "pausectr" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "ledreg0" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "pausectr" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "comScore" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "playerScore" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ledpause0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "pausectr" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "p_0_out" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "pausectr" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ballXvel" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "ledreg0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "lastPlayerWin" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "d0/fsm_next_state0" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "d0/fsm_next_state0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "clk20k0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "pausectr" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ledreg0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s0/max" won't be mapped to RAM because it is too sparse
 WARNING: [Synth 8-3917] design Top_Student has port dp driven by constant 1
-WARNING: [Synth 8-3917] design Top_Student has port JDisplay[7] driven by constant 1
-WARNING: [Synth 8-3331] design solidsnake has unconnected port btnC
-WARNING: [Synth 8-3331] design solidsnake has unconnected port btnD
-WARNING: [Synth 8-3331] design solidsnake has unconnected port btnL
-WARNING: [Synth 8-3331] design solidsnake has unconnected port btnR
-WARNING: [Synth 8-3331] design solidsnake has unconnected port btnU
-WARNING: [Synth 8-3331] design solidsnake has unconnected port dbounceC
-WARNING: [Synth 8-3331] design solidsnake has unconnected port globalreset
-WARNING: [Synth 8-3331] design voicepong has unconnected port btnC
-WARNING: [Synth 8-3331] design voicepong has unconnected port btnD
-WARNING: [Synth 8-3331] design voicepong has unconnected port btnU
-WARNING: [Synth 8-3331] design voicepong has unconnected port dbounceL
-WARNING: [Synth 8-3331] design voicepong has unconnected port dbounceR
-WARNING: [Synth 8-3331] design volumebar has unconnected port sw[15]
-WARNING: [Synth 8-3331] design volumebar has unconnected port sw[14]
-WARNING: [Synth 8-3331] design volumebar has unconnected port sw[13]
-WARNING: [Synth 8-3331] design volumebar has unconnected port sw[12]
-WARNING: [Synth 8-3331] design volumebar has unconnected port sw[11]
-WARNING: [Synth 8-3331] design volumebar has unconnected port sw[10]
-WARNING: [Synth 8-3331] design volumebar has unconnected port sw[9]
-WARNING: [Synth 8-3331] design volumebar has unconnected port sw[8]
-WARNING: [Synth 8-3331] design volumebar has unconnected port sw[7]
-WARNING: [Synth 8-3331] design volumebar has unconnected port btnC
-WARNING: [Synth 8-3331] design volumebar has unconnected port btnD
-WARNING: [Synth 8-3331] design volumebar has unconnected port btnU
-WARNING: [Synth 8-3331] design mainmenu has unconnected port btnC
-WARNING: [Synth 8-3331] design mainmenu has unconnected port btnD
-WARNING: [Synth 8-3331] design mainmenu has unconnected port btnL
-WARNING: [Synth 8-3331] design mainmenu has unconnected port btnR
-WARNING: [Synth 8-3331] design mainmenu has unconnected port btnU
-WARNING: [Synth 8-3331] design mainmenu has unconnected port dbounceL
-WARNING: [Synth 8-3331] design mainmenu has unconnected port dbounceR
-WARNING: [Synth 8-3331] design Top_Student has unconnected port J_MIC3_Pin1
-WARNING: [Synth 8-3331] design Top_Student has unconnected port J_MIC3_Pin4
 WARNING: [Synth 8-3331] design Top_Student has unconnected port JDisplay[2]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port J_MIC3_Pin3
-INFO: [Synth 8-3886] merging instance 'snake/oled_data_reg[0]' (FD) to 'snake/oled_data_reg[7]'
-INFO: [Synth 8-3886] merging instance 'pong/oled_data_reg[0]' (FDSE) to 'pong/oled_data_reg[14]'
-INFO: [Synth 8-3886] merging instance 'bar/oled_data_reg[0]' (FDE) to 'bar/oled_data_reg[14]'
-INFO: [Synth 8-3886] merging instance 'menu/oled_data_reg[0]' (FDE) to 'menu/oled_data_reg[14]'
-INFO: [Synth 8-3886] merging instance 'snake/oled_data_reg[1]' (FD) to 'snake/oled_data_reg[2]'
-INFO: [Synth 8-3886] merging instance 'pong/oled_data_reg[1]' (FDSE) to 'pong/oled_data_reg[14]'
-INFO: [Synth 8-3886] merging instance 'menu/oled_data_reg[1]' (FDE) to 'menu/oled_data_reg[14]'
-INFO: [Synth 8-3886] merging instance 'snake/oled_data_reg[2]' (FD) to 'snake/oled_data_reg[3]'
-INFO: [Synth 8-3886] merging instance 'pong/oled_data_reg[2]' (FDSE) to 'pong/oled_data_reg[14]'
-INFO: [Synth 8-3886] merging instance 'menu/oled_data_reg[2]' (FDE) to 'menu/oled_data_reg[14]'
-INFO: [Synth 8-3886] merging instance 'snake/oled_data_reg[3]' (FD) to 'snake/oled_data_reg[4]'
-INFO: [Synth 8-3886] merging instance 'pong/oled_data_reg[3]' (FDSE) to 'pong/oled_data_reg[14]'
-INFO: [Synth 8-3886] merging instance 'menu/oled_data_reg[3]' (FDE) to 'menu/oled_data_reg[14]'
-INFO: [Synth 8-3886] merging instance 'snake/oled_data_reg[4]' (FD) to 'snake/oled_data_reg[5]'
-INFO: [Synth 8-3886] merging instance 'pong/oled_data_reg[4]' (FDSE) to 'pong/oled_data_reg[14]'
-INFO: [Synth 8-3886] merging instance 'menu/oled_data_reg[4]' (FDE) to 'menu/oled_data_reg[14]'
-INFO: [Synth 8-3886] merging instance 'snake/oled_data_reg[5]' (FD) to 'snake/oled_data_reg[6]'
-INFO: [Synth 8-3886] merging instance 'pong/oled_data_reg[5]' (FDSE) to 'pong/oled_data_reg[14]'
-INFO: [Synth 8-3886] merging instance 'menu/oled_data_reg[5]' (FDE) to 'menu/oled_data_reg[14]'
-INFO: [Synth 8-3886] merging instance 'snake/oled_data_reg[6]' (FD) to 'snake/oled_data_reg[9]'
-INFO: [Synth 8-3886] merging instance 'pong/oled_data_reg[6]' (FDSE) to 'pong/oled_data_reg[14]'
-INFO: [Synth 8-3886] merging instance 'menu/oled_data_reg[6]' (FDE) to 'menu/oled_data_reg[14]'
-INFO: [Synth 8-3886] merging instance 'snake/oled_data_reg[7]' (FD) to 'snake/oled_data_reg[8]'
-INFO: [Synth 8-3886] merging instance 'pong/oled_data_reg[7]' (FDSE) to 'pong/oled_data_reg[14]'
-INFO: [Synth 8-3886] merging instance 'menu/oled_data_reg[7]' (FDE) to 'menu/oled_data_reg[14]'
-INFO: [Synth 8-3886] merging instance 'snake/oled_data_reg[8]' (FD) to 'snake/oled_data_reg[11]'
-INFO: [Synth 8-3886] merging instance 'pong/oled_data_reg[8]' (FDSE) to 'pong/oled_data_reg[14]'
-INFO: [Synth 8-3886] merging instance 'menu/oled_data_reg[8]' (FDE) to 'menu/oled_data_reg[14]'
-INFO: [Synth 8-3886] merging instance 'snake/oled_data_reg[9]' (FD) to 'snake/oled_data_reg[10]'
-INFO: [Synth 8-3886] merging instance 'pong/oled_data_reg[9]' (FDSE) to 'pong/oled_data_reg[14]'
-INFO: [Synth 8-3886] merging instance 'bar/oled_data_reg[9]' (FDE) to 'bar/oled_data_reg[10]'
-INFO: [Synth 8-3886] merging instance 'menu/oled_data_reg[9]' (FDE) to 'menu/oled_data_reg[14]'
-INFO: [Synth 8-3886] merging instance 'pong/oled_data_reg[10]' (FDSE) to 'pong/oled_data_reg[14]'
-INFO: [Synth 8-3886] merging instance 'menu/oled_data_reg[10]' (FDE) to 'menu/oled_data_reg[14]'
-INFO: [Synth 8-3886] merging instance 'snake/oled_data_reg[11]' (FD) to 'snake/oled_data_reg[12]'
-INFO: [Synth 8-3886] merging instance 'pong/oled_data_reg[11]' (FDSE) to 'pong/oled_data_reg[14]'
-INFO: [Synth 8-3886] merging instance 'menu/oled_data_reg[11]' (FDE) to 'menu/oled_data_reg[14]'
-INFO: [Synth 8-3886] merging instance 'snake/oled_data_reg[12]' (FD) to 'snake/oled_data_reg[13]'
-INFO: [Synth 8-3886] merging instance 'pong/oled_data_reg[12]' (FDSE) to 'pong/oled_data_reg[14]'
-INFO: [Synth 8-3886] merging instance 'menu/oled_data_reg[12]' (FDE) to 'menu/oled_data_reg[14]'
-INFO: [Synth 8-3886] merging instance 'snake/oled_data_reg[13]' (FD) to 'snake/oled_data_reg[14]'
-INFO: [Synth 8-3886] merging instance 'pong/oled_data_reg[13]' (FDSE) to 'pong/oled_data_reg[14]'
-INFO: [Synth 8-3886] merging instance 'menu/oled_data_reg[13]' (FDE) to 'menu/oled_data_reg[14]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\ypos_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\xpos_reg[0] )
-INFO: [Synth 8-3886] merging instance 'snake/oled_data_reg[14]' (FD) to 'snake/oled_data_reg[15]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6143] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6142] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6141] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6140] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6139] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6138] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6137] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6136] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6135] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6134] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6133] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6132] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6131] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6130] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6129] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6128] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6127] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6126] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6125] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6124] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6123] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6122] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6121] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6120] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6119] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6118] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6117] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6116] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6115] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6114] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6113] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6112] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6111] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6110] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6109] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6108] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6107] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6106] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6105] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6104] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6103] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6102] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6101] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6100] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6099] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6098] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6097] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6096] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6095] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6094] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6093] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6092] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6091] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6090] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6089] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6088] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6087] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6086] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6085] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6084] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6083] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6082] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6081] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6080] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6079] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6078] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6077] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6076] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6075] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6074] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6073] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6072] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6071] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6070] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6069] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6068] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6067] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6066] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6065] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6064] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6063] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6062] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6061] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6060] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6059] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6058] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6057] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6056] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6055] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6054] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6053] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6052] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6051] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6050] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6049] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6048] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6047] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake/\snakemap_reg[6046] )
-INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-3886] merging instance 'pong/statechange_reg[0]' (FDRE) to 'pong/statechange_reg[3]'
-INFO: [Synth 8-3886] merging instance 'pong/statechange_reg[1]' (FDRE) to 'pong/statechange_reg[3]'
-INFO: [Synth 8-3886] merging instance 'pong/statechange_reg[3]' (FDRE) to 'pong/statechange_reg[2]'
-INFO: [Synth 8-3886] merging instance 'bar/statechange_reg[0]' (FDRE) to 'bar/statechange_reg[1]'
-INFO: [Synth 8-3886] merging instance 'bar/statechange_reg[1]' (FDRE) to 'bar/statechange_reg[2]'
-INFO: [Synth 8-3886] merging instance 'bar/statechange_reg[3]' (FDRE) to 'bar/statechange_reg[2]'
-INFO: [Synth 8-3886] merging instance 'menu/statechange_reg[3]' (FDE) to 'menu/statechange_reg[2]'
-INFO: [Synth 8-3886] merging instance 'pong/segreg_reg[0]' (FDE) to 'pong/segreg_reg[3]'
-INFO: [Synth 8-3886] merging instance 'oled_data_reg[0]' (FDE) to 'oled_data_reg[14]'
-INFO: [Synth 8-3886] merging instance 'oled_data_reg[9]' (FDE) to 'oled_data_reg[10]'
-WARNING: [Synth 8-3332] Sequential element (xpos_reg[0]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (ypos_reg[0]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6143]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6142]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6141]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6140]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6139]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6138]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6137]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6136]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6135]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6134]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6133]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6132]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6131]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6130]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6129]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6128]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6127]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6126]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6125]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6124]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6123]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6122]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6121]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6120]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6119]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6118]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6117]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6116]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6115]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6114]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6113]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6112]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6111]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6110]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6109]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6108]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6107]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6106]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6105]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6104]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6103]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6102]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6101]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6100]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6099]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6098]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6097]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6096]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6095]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6094]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6093]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6092]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6091]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6090]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6089]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6088]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6087]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6086]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6085]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6084]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6083]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6082]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6081]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6080]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6079]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6078]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6077]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6076]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6075]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6074]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6073]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6072]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6071]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6070]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6069]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6068]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6067]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6066]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6065]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6064]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6063]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6062]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6061]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6060]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6059]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6058]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6057]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6056]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6055]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6054]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6053]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6052]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6051]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6050]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6049]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6048]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6047]) is unused and will be removed from module solidsnake.
-WARNING: [Synth 8-3332] Sequential element (snakemap_reg[6046]) is unused and will be removed from module solidsnake.
-INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-3886] merging instance 'snake/snakemap_reg[5]' (FDE) to 'snake/snakemap_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snakei_6/\pelletxpos_reg[6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (snakei_6/\anreg_reg[3] )
+INFO: [Synth 8-3886] merging instance 'snakei_6/statechange_reg[0]' (FDRE) to 'snakei_6/statechange_reg[3]'
+INFO: [Synth 8-3886] merging instance 'snakei_6/statechange_reg[1]' (FDRE) to 'snakei_6/statechange_reg[3]'
+INFO: [Synth 8-3886] merging instance 'snakei_6/statechange_reg[2]' (FDRE) to 'snakei_6/statechange_reg[3]'
+INFO: [Synth 8-3886] merging instance 'snakei_6/oled_data_reg[0]' (FDE) to 'snakei_6/oled_data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'snakei_6/oled_data_reg[1]' (FDE) to 'snakei_6/oled_data_reg[6]'
+INFO: [Synth 8-3886] merging instance 'snakei_6/oled_data_reg[2]' (FDE) to 'snakei_6/oled_data_reg[10]'
+INFO: [Synth 8-3886] merging instance 'snakei_6/oled_data_reg[3]' (FDE) to 'snakei_6/oled_data_reg[10]'
+INFO: [Synth 8-3886] merging instance 'snakei_6/oled_data_reg[4]' (FDE) to 'snakei_6/oled_data_reg[10]'
+INFO: [Synth 8-3886] merging instance 'snakei_6/oled_data_reg[5]' (FDE) to 'snakei_6/oled_data_reg[10]'
+INFO: [Synth 8-3886] merging instance 'snakei_6/oled_data_reg[7]' (FDE) to 'snakei_6/oled_data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'snakei_6/oled_data_reg[8]' (FDE) to 'snakei_6/oled_data_reg[11]'
+INFO: [Synth 8-3886] merging instance 'snakei_6/oled_data_reg[9]' (FDE) to 'snakei_6/oled_data_reg[10]'
+INFO: [Synth 8-3886] merging instance 'snakei_6/oled_data_reg[12]' (FDE) to 'snakei_6/oled_data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'snakei_6/oled_data_reg[13]' (FDE) to 'snakei_6/oled_data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'i_0/pong/oled_data_reg[0]' (FDSE) to 'i_0/pong/oled_data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'i_0/bar/oled_data_reg[0]' (FDE) to 'i_0/bar/oled_data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'i_0/menu/oled_data_reg[0]' (FDE) to 'i_0/menu/oled_data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'i_0/pong/oled_data_reg[1]' (FDSE) to 'i_0/pong/oled_data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'i_0/menu/oled_data_reg[1]' (FDE) to 'i_0/menu/oled_data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'i_0/pong/oled_data_reg[2]' (FDSE) to 'i_0/pong/oled_data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'i_0/menu/oled_data_reg[2]' (FDE) to 'i_0/menu/oled_data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'i_0/pong/oled_data_reg[3]' (FDSE) to 'i_0/pong/oled_data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'i_0/menu/oled_data_reg[3]' (FDE) to 'i_0/menu/oled_data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'i_0/pong/oled_data_reg[4]' (FDSE) to 'i_0/pong/oled_data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'i_0/menu/oled_data_reg[4]' (FDE) to 'i_0/menu/oled_data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'i_0/pong/oled_data_reg[5]' (FDSE) to 'i_0/pong/oled_data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'i_0/menu/oled_data_reg[5]' (FDE) to 'i_0/menu/oled_data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'i_0/pong/oled_data_reg[6]' (FDSE) to 'i_0/pong/oled_data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'i_0/menu/oled_data_reg[6]' (FDE) to 'i_0/menu/oled_data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'i_0/pong/oled_data_reg[7]' (FDSE) to 'i_0/pong/oled_data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'i_0/menu/oled_data_reg[7]' (FDE) to 'i_0/menu/oled_data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'i_0/pong/oled_data_reg[8]' (FDSE) to 'i_0/pong/oled_data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'i_0/menu/oled_data_reg[8]' (FDE) to 'i_0/menu/oled_data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'i_0/pong/oled_data_reg[9]' (FDSE) to 'i_0/pong/oled_data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'i_0/bar/oled_data_reg[9]' (FDE) to 'i_0/bar/oled_data_reg[10]'
+INFO: [Synth 8-3886] merging instance 'i_0/menu/oled_data_reg[9]' (FDE) to 'i_0/menu/oled_data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'i_0/pong/oled_data_reg[10]' (FDSE) to 'i_0/pong/oled_data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'i_0/menu/oled_data_reg[10]' (FDE) to 'i_0/menu/oled_data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'i_0/pong/oled_data_reg[11]' (FDSE) to 'i_0/pong/oled_data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'i_0/menu/oled_data_reg[11]' (FDE) to 'i_0/menu/oled_data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'i_0/pong/oled_data_reg[12]' (FDSE) to 'i_0/pong/oled_data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'i_0/menu/oled_data_reg[12]' (FDE) to 'i_0/menu/oled_data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'i_0/pong/oled_data_reg[13]' (FDSE) to 'i_0/pong/oled_data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'i_0/menu/oled_data_reg[13]' (FDE) to 'i_0/menu/oled_data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'i_0/pong/statechange_reg[0]' (FDRE) to 'i_0/pong/statechange_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/pong/statechange_reg[1]' (FDRE) to 'i_0/pong/statechange_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/pong/statechange_reg[3]' (FDRE) to 'i_0/pong/statechange_reg[2]'
+INFO: [Synth 8-3886] merging instance 'i_0/bar/statechange_reg[0]' (FDRE) to 'i_0/bar/statechange_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_0/bar/statechange_reg[1]' (FDRE) to 'i_0/bar/statechange_reg[2]'
+INFO: [Synth 8-3886] merging instance 'i_0/bar/statechange_reg[3]' (FDRE) to 'i_0/bar/statechange_reg[2]'
+INFO: [Synth 8-3886] merging instance 'i_0/pong/segreg_reg[0]' (FDE) to 'i_0/pong/segreg_reg[3]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_0/bar/\anreg_reg[2] )
+WARNING: [Synth 8-3332] Sequential element (anreg_reg[2]) is unused and will be removed from module volumebar.
+INFO: [Synth 8-3886] merging instance 'i_1/wave/volarray_reg[2]' (FD) to 'i_1/wave/volarray_reg[0]'
+INFO: [Synth 8-3886] merging instance 'i_1/wave/volarray_reg[3]' (FD) to 'i_1/wave/volarray_reg[0]'
+INFO: [Synth 8-3886] merging instance 'i_1/wave/volarray_reg[4]' (FD) to 'i_1/wave/volarray_reg[0]'
+INFO: [Synth 8-3886] merging instance 'i_1/wave/volarray_reg[0]' (FD) to 'i_1/wave/volarray_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_1/\wave/volarray_reg[1] )
+INFO: [Synth 8-3886] merging instance 'i_1/wave/statechange_reg[0]' (FDRE) to 'i_1/wave/statechange_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_1/wave/statechange_reg[1]' (FDRE) to 'i_1/wave/statechange_reg[2]'
+INFO: [Synth 8-3886] merging instance 'i_1/wave/statechange_reg[2]' (FDRE) to 'i_1/wave/statechange_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_1/wave/oled_data_reg[0]' (FDE) to 'i_1/wave/oled_data_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_1/wave/oled_data_reg[1]' (FDE) to 'i_1/wave/oled_data_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_1/wave/oled_data_reg[2]' (FDE) to 'i_1/wave/oled_data_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_1/wave/oled_data_reg[3]' (FDE) to 'i_1/wave/oled_data_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_1/wave/oled_data_reg[5]' (FDE) to 'i_1/wave/oled_data_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_1/wave/oled_data_reg[6]' (FDE) to 'i_1/wave/oled_data_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_1/wave/oled_data_reg[7]' (FDE) to 'i_1/wave/oled_data_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_1/wave/oled_data_reg[8]' (FDE) to 'i_1/wave/oled_data_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_1/wave/oled_data_reg[9]' (FDE) to 'i_1/wave/oled_data_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_1/wave/oled_data_reg[10]' (FDE) to 'i_1/wave/oled_data_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_1/wave/oled_data_reg[13]' (FDE) to 'i_1/wave/oled_data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'i_0/oled_data_reg[9]' (FDE) to 'i_0/oled_data_reg[10]'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:28 ; elapsed = 00:01:36 . Memory (MB): peak = 803.902 ; gain = 546.910
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:07 ; elapsed = 00:02:11 . Memory (MB): peak = 1008.703 ; gain = 752.496
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -826,12 +902,18 @@ ROM:
 +------------+------------+---------------+----------------+
 |mainmenu    | p_0_out    | 8192x16       | LUT            | 
 |volumebar   | p_0_out    | 8192x16       | LUT            | 
+|waveform    | p_0_out    | 8192x16       | LUT            | 
 |voicepong   | p_0_out    | 8192x16       | LUT            | 
 |voicepong   | p_0_out    | 8192x16       | LUT            | 
+|solidsnake  | p_0_out    | 8192x16       | LUT            | 
+|solidsnake  | p_0_out    | 8192x16       | LUT            | 
+|Top_Student | p_0_out    | 8192x16       | LUT            | 
+|Top_Student | p_0_out    | 8192x16       | LUT            | 
 |mainmenu    | p_0_out    | 8192x16       | LUT            | 
 |volumebar   | p_0_out    | 8192x16       | LUT            | 
 |voicepong   | p_0_out    | 8192x16       | LUT            | 
 |voicepong   | p_0_out    | 8192x16       | LUT            | 
+|waveform    | p_0_out    | 8192x16       | LUT            | 
 +------------+------------+---------------+----------------+
 
 ---------------------------------------------------------------------------------
@@ -839,44 +921,44 @@ Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
++------+------------------+------------+----------+
+|      |RTL Partition     |Replication |Instances |
++------+------------------+------------+----------+
+|1     |solidsnake__GB0   |           1|     11034|
+|2     |solidsnake__GB3   |           1|      8226|
+|3     |solidsnake__GB4   |           1|     20328|
+|4     |Top_Student__GCB0 |           1|      4680|
+|5     |Top_Student__GCB1 |           1|      2175|
++------+------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:40 ; elapsed = 00:01:49 . Memory (MB): peak = 803.902 ; gain = 546.910
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:18 ; elapsed = 00:02:22 . Memory (MB): peak = 1008.703 ; gain = 752.496
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:42 ; elapsed = 00:01:51 . Memory (MB): peak = 830.465 ; gain = 573.473
+Finished Timing Optimization : Time (s): cpu = 00:02:38 ; elapsed = 00:02:43 . Memory (MB): peak = 1149.219 ; gain = 893.012
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
++------+------------------+------------+----------+
+|      |RTL Partition     |Replication |Instances |
++------+------------------+------------+----------+
+|1     |solidsnake__GB0   |           1|     11034|
+|2     |solidsnake__GB3   |           1|      8226|
+|3     |solidsnake__GB4   |           1|     19673|
+|4     |Top_Student__GCB0 |           1|      4680|
+|5     |Top_Student__GCB1 |           1|      2175|
++------+------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-3886] merging instance 'oled_data_reg[1]' (FDSE) to 'oled_data_reg[2]'
-INFO: [Synth 8-3886] merging instance 'oled_data_reg[2]' (FDSE) to 'oled_data_reg[3]'
-INFO: [Synth 8-3886] merging instance 'oled_data_reg[3]' (FDSE) to 'oled_data_reg[4]'
-INFO: [Synth 8-3886] merging instance 'oled_data_reg[4]' (FDSE) to 'oled_data_reg[5]'
-INFO: [Synth 8-3886] merging instance 'oled_data_reg[5]' (FDSE) to 'oled_data_reg[6]'
-INFO: [Synth 8-3886] merging instance 'oled_data_reg[6]' (FDSE) to 'oled_data_reg[10]'
-INFO: [Synth 8-3886] merging instance 'oled_data_reg[7]' (FDSE) to 'oled_data_reg[8]'
-INFO: [Synth 8-3886] merging instance 'oled_data_reg[8]' (FDSE) to 'oled_data_reg[11]'
-INFO: [Synth 8-3886] merging instance 'oled_data_reg[11]' (FDSE) to 'oled_data_reg[12]'
-INFO: [Synth 8-3886] merging instance 'oled_data_reg[12]' (FDSE) to 'oled_data_reg[13]'
-INFO: [Synth 8-3886] merging instance 'oled_data_reg[13]' (FDSE) to 'oled_data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'wave/oled_data_reg[4]' (FDE) to 'wave/oled_data_reg[15]'
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:43 ; elapsed = 00:01:52 . Memory (MB): peak = 839.250 ; gain = 582.258
+Finished Technology Mapping : Time (s): cpu = 00:02:50 ; elapsed = 00:02:55 . Memory (MB): peak = 1201.980 ; gain = 945.773
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -900,7 +982,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:45 ; elapsed = 00:01:54 . Memory (MB): peak = 839.250 ; gain = 582.258
+Finished IO Insertion : Time (s): cpu = 00:02:52 ; elapsed = 00:02:57 . Memory (MB): peak = 1201.980 ; gain = 945.773
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -913,7 +995,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:45 ; elapsed = 00:01:54 . Memory (MB): peak = 839.250 ; gain = 582.258
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:52 ; elapsed = 00:02:57 . Memory (MB): peak = 1201.980 ; gain = 945.773
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -925,25 +1007,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:45 ; elapsed = 00:01:54 . Memory (MB): peak = 839.250 ; gain = 582.258
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:54 ; elapsed = 00:02:59 . Memory (MB): peak = 1201.980 ; gain = 945.773
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:45 ; elapsed = 00:01:54 . Memory (MB): peak = 839.250 ; gain = 582.258
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:54 ; elapsed = 00:02:59 . Memory (MB): peak = 1201.980 ; gain = 945.773
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:45 ; elapsed = 00:01:54 . Memory (MB): peak = 839.250 ; gain = 582.258
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:57 ; elapsed = 00:03:02 . Memory (MB): peak = 1201.980 ; gain = 945.773
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:45 ; elapsed = 00:01:54 . Memory (MB): peak = 839.250 ; gain = 582.258
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:57 ; elapsed = 00:03:02 . Memory (MB): peak = 1201.980 ; gain = 945.773
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -959,64 +1041,87 @@ Report Cell Usage:
 +------+-------+------+
 |      |Cell   |Count |
 +------+-------+------+
-|1     |BUFG   |     2|
-|2     |CARRY4 |    55|
-|3     |LUT1   |    23|
-|4     |LUT2   |    75|
-|5     |LUT3   |    54|
-|6     |LUT4   |    38|
-|7     |LUT5   |    43|
-|8     |LUT6   |   117|
-|9     |FDE_1  |    32|
-|10    |FDRE   |   182|
-|11    |FDSE   |     2|
-|12    |IBUF   |     5|
-|13    |OBUF   |    35|
-|14    |OBUFT  |     3|
+|1     |BUFG   |     4|
+|2     |CARRY4 |   316|
+|3     |LUT1   |   107|
+|4     |LUT2   |   573|
+|5     |LUT3   |  1599|
+|6     |LUT4   |   582|
+|7     |LUT5   |   405|
+|8     |LUT6   |  6371|
+|9     |MUXF7  |   889|
+|10    |MUXF8  |   362|
+|11    |FDE_1  |    32|
+|12    |FDRE   |  5558|
+|13    |FDSE   |    22|
+|14    |IBUF   |    13|
+|15    |OBUF   |    37|
+|16    |OBUFT  |     1|
 +------+-------+------+
 
 Report Instance Areas: 
 +------+-------------------+---------------------+------+
 |      |Instance           |Module               |Cells |
 +------+-------------------+---------------------+------+
-|1     |top                |                     |   666|
-|2     |  c0               |Coordinate_Converter |   131|
-|3     |  d0               |Oled_Display         |   300|
-|4     |  dbD              |SPO                  |     6|
-|5     |    flip1          |dFlip_19             |     2|
-|6     |    flip2          |dFlip_20             |     1|
-|7     |    flip3          |dFlip_21             |     2|
-|8     |    flip4          |dFlip_22             |     1|
-|9     |  dbL              |SPO_0                |     6|
-|10    |    flip1          |dFlip_15             |     2|
-|11    |    flip2          |dFlip_16             |     1|
-|12    |    flip3          |dFlip_17             |     1|
-|13    |    flip4          |dFlip_18             |     2|
-|14    |  dbR              |SPO_1                |     6|
-|15    |    flip1          |dFlip_11             |     2|
-|16    |    flip2          |dFlip_12             |     1|
-|17    |    flip3          |dFlip_13             |     1|
-|18    |    flip4          |dFlip_14             |     2|
-|19    |  dbU              |SPO_2                |     6|
-|20    |    flip1          |dFlip_7              |     2|
-|21    |    flip2          |dFlip_8              |     1|
-|22    |    flip3          |dFlip_9              |     2|
-|23    |    flip4          |dFlip_10             |     1|
-|24    |  snake            |solidsnake           |   122|
-|25    |    twentytwotoCLK |SPO_3                |     8|
-|26    |      flip1        |dFlip                |     2|
-|27    |      flip2        |dFlip_4              |     1|
-|28    |      flip3        |dFlip_5              |     2|
-|29    |      flip4        |dFlip_6              |     3|
+|1     |top                |                     | 16871|
+|2     |  bar              |volumebar            |   411|
+|3     |  c0               |Coordinate_Converter |   546|
+|4     |  d0               |Oled_Display         |   303|
+|5     |  dbC              |SPO                  |     7|
+|6     |    flip1          |dFlip_34             |     2|
+|7     |    flip2          |dFlip_35             |     1|
+|8     |    flip3          |dFlip_36             |     2|
+|9     |    flip4          |dFlip_37             |     2|
+|10    |  dbD              |SPO_0                |     6|
+|11    |    flip1          |dFlip_30             |     2|
+|12    |    flip2          |dFlip_31             |     1|
+|13    |    flip3          |dFlip_32             |     2|
+|14    |    flip4          |dFlip_33             |     1|
+|15    |  dbL              |SPO_1                |     6|
+|16    |    flip1          |dFlip_26             |     2|
+|17    |    flip2          |dFlip_27             |     1|
+|18    |    flip3          |dFlip_28             |     2|
+|19    |    flip4          |dFlip_29             |     1|
+|20    |  dbR              |SPO_2                |     6|
+|21    |    flip1          |dFlip_22             |     2|
+|22    |    flip2          |dFlip_23             |     1|
+|23    |    flip3          |dFlip_24             |     2|
+|24    |    flip4          |dFlip_25             |     1|
+|25    |  dbRESET          |SPO_3                |     8|
+|26    |    flip1          |dFlip_18             |     2|
+|27    |    flip2          |dFlip_19             |     1|
+|28    |    flip3          |dFlip_20             |     2|
+|29    |    flip4          |dFlip_21             |     3|
+|30    |  dbU              |SPO_4                |     6|
+|31    |    flip1          |dFlip_14             |     2|
+|32    |    flip2          |dFlip_15             |     1|
+|33    |    flip3          |dFlip_16             |     2|
+|34    |    flip4          |dFlip_17             |     1|
+|35    |  menu             |mainmenu             |   196|
+|36    |  microphone       |Audio_Capture        |   104|
+|37    |  pong             |voicepong            |  1021|
+|38    |    twentytoCLK    |SPO_9                |    36|
+|39    |      flip1        |dFlip_10             |     2|
+|40    |      flip2        |dFlip_11             |     1|
+|41    |      flip3        |dFlip_12             |    26|
+|42    |      flip4        |dFlip_13             |     7|
+|43    |  s0               |slowmax              |   105|
+|44    |  snake            |solidsnake           | 12996|
+|45    |    twentytwotoCLK |SPO_5                |  2776|
+|46    |      flip1        |dFlip                |     2|
+|47    |      flip2        |dFlip_6              |     1|
+|48    |      flip3        |dFlip_7              |  2772|
+|49    |      flip4        |dFlip_8              |     1|
+|50    |  wave             |waveform             |   939|
 +------+-------------------+---------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:45 ; elapsed = 00:01:54 . Memory (MB): peak = 839.250 ; gain = 582.258
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:57 ; elapsed = 00:03:02 . Memory (MB): peak = 1201.980 ; gain = 945.773
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 6361 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:23 ; elapsed = 00:01:35 . Memory (MB): peak = 839.250 ; gain = 222.961
-Synthesis Optimization Complete : Time (s): cpu = 00:01:45 ; elapsed = 00:01:54 . Memory (MB): peak = 839.250 ; gain = 582.258
+Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:40 ; elapsed = 00:02:50 . Memory (MB): peak = 1201.980 ; gain = 536.648
+Synthesis Optimization Complete : Time (s): cpu = 00:02:57 ; elapsed = 00:03:02 . Memory (MB): peak = 1201.980 ; gain = 945.773
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 92 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 1612 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -1025,11 +1130,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   FDE_1 => FDRE (inverted pins: C): 32 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-263 Infos, 185 Warnings, 0 Critical Warnings and 0 Errors encountered.
+212 Infos, 79 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:48 ; elapsed = 00:01:58 . Memory (MB): peak = 839.250 ; gain = 595.453
+synth_design: Time (s): cpu = 00:03:02 ; elapsed = 00:03:08 . Memory (MB): peak = 1201.980 ; gain = 958.648
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/rondayvoo/Documents/Vivado/SoundDisplay/SoundDisplay.runs/synth_1/Top_Student.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Top_Student_utilization_synth.rpt -pb Top_Student_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.128 . Memory (MB): peak = 839.250 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Mon Mar 15 14:44:02 2021...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.179 . Memory (MB): peak = 1201.980 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 30 18:04:17 2021...

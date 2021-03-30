@@ -71,13 +71,20 @@ module mainmenu(
             statechange <= 1;
         end
         
+        if (dbounceC && cursor == 1) begin
+            statechange <= 2;             
+        end                               
+        
         if (dbounceC && cursor == 2) begin
             statechange <= 3;             
-        end       
+        end 
+        
+        if (dbounceC && cursor == 3) begin
+            statechange <= 4;             
+        end      
         
         if (globalreset) begin
             cursor <= 0;
-            inputwait <= 0;
         end                       
     end
     

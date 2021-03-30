@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Mon Mar 15 14:45:10 2021
+| Date         : Tue Mar 30 18:06:05 2021
 | Host         : LAPTOP-PE3V4VON running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Top_Student_control_sets_placed.rpt
 | Design       : Top_Student
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |    13 |
-| Unused register locations in slices containing registers |    48 |
+| Number of unique control sets                            |    57 |
+| Unused register locations in slices containing registers |   112 |
 +----------------------------------------------------------+-------+
 
 
@@ -35,10 +35,12 @@ Table of Contents
 | Fanout | Control Sets |
 +--------+--------------+
 |      2 |            3 |
-|      4 |            1 |
+|      4 |            2 |
+|      8 |           13 |
 |     10 |            1 |
-|     12 |            1 |
-|    16+ |            7 |
+|     12 |            6 |
+|     14 |            2 |
+|    16+ |           30 |
 +--------+--------------+
 
 
@@ -48,34 +50,78 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |             154 |           25 |
+| No           | No                    | No                     |            4592 |         1109 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |             124 |           21 |
-| Yes          | No                    | No                     |             150 |           21 |
+| No           | Yes                   | No                     |             422 |           61 |
+| Yes          | No                    | No                     |             326 |           62 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |               4 |            2 |
+| Yes          | Yes                   | No                     |            5884 |          791 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+----------------------+-----------------------------------------------+------------------------------+------------------+----------------+
-|     Clock Signal     |                 Enable Signal                 |       Set/Reset Signal       | Slice Load Count | Bel Load Count |
-+----------------------+-----------------------------------------------+------------------------------+------------------+----------------+
-| ~clk6p25m_BUFG       |                                               |                              |                1 |              2 |
-|  CLK100MHZ_IBUF_BUFG | oled_data[14]_i_2_n_0                         | snake/oled_data_reg[14]      |                1 |              2 |
-|  CLK100MHZ_IBUF_BUFG | oled_data[14]_i_2_n_0                         | snake/oled_data_reg[10]_1    |                1 |              2 |
-|  snake/p_0_in        |                                               |                              |                1 |              4 |
-|  CLK100MHZ_IBUF_BUFG | snake/twentytwotoCLK/flip4/ypos_reg[1][0]     |                              |                1 |             10 |
-|  CLK100MHZ_IBUF_BUFG | snake/twentytwotoCLK/flip4/E[0]               |                              |                2 |             12 |
-|  CLOCK               |                                               |                              |                1 |             16 |
-|  CLK100MHZ_IBUF_BUFG | snake/twentytwotoCLK/flip3/snakemap_reg[0][0] |                              |                4 |             24 |
-| ~clk6p25m_BUFG       |                                               | d0/frame_counter[16]_i_1_n_0 |                5 |             34 |
-| ~clk6p25m_BUFG       | d0/delay[0]_i_1_n_0                           |                              |                5 |             40 |
-| ~clk6p25m_BUFG       | d0/state                                      |                              |                9 |             64 |
-| ~clk6p25m_BUFG       |                                               | d0/spi_word[39]_i_1_n_0      |               16 |             90 |
-|  CLK100MHZ_IBUF_BUFG |                                               |                              |               22 |            132 |
-+----------------------+-----------------------------------------------+------------------------------+------------------+----------------+
++------------------------------+---------------------------------------------------+-----------------------------------------------------+------------------+----------------+
+|         Clock Signal         |                   Enable Signal                   |                   Set/Reset Signal                  | Slice Load Count | Bel Load Count |
++------------------------------+---------------------------------------------------+-----------------------------------------------------+------------------+----------------+
+| ~clk6p25m_BUFG               |                                                   |                                                     |                1 |              2 |
+|  snake/ctr27_reg_n_0_[4]     |                                                   |                                                     |                1 |              2 |
+|  CLK100MHZ_IBUF_BUFG         | oled_data[15]_i_1__3_n_0                          | anreg[3]_i_1__1_n_0                                 |                1 |              2 |
+|  menu/p_1_in                 |                                                   |                                                     |                1 |              4 |
+|  pong/p_2_in                 |                                                   |                                                     |                1 |              4 |
+|  snake/ctr27_reg_n_0_[4]     | snake/oled_data_reg[14]_0                         | c0/oled_data_reg[14]_3                              |                2 |              8 |
+|  pong/clk                    | pong/comPaddlePos[3]_i_1_n_0                      |                                                     |                1 |              8 |
+|  CLK100MHZ_IBUF_BUFG         | bar/cursor[3]_i_2__1_n_0                          | bar/cursor[3]_i_1__3_n_0                            |                1 |              8 |
+|  CLK100MHZ_IBUF_BUFG         | pong/playerPaddlePos[3]_i_1_n_0                   |                                                     |                1 |              8 |
+|  CLK100MHZ_IBUF_BUFG         | pong/cursor[3]_i_2__2_n_0                         | pong/cursor                                         |                1 |              8 |
+|  wave/p_0_in                 | wave/oled_data[15]_i_1__4_n_0                     |                                                     |                1 |              8 |
+|  CLK100MHZ_IBUF_BUFG         | menu/statechange[3]_i_1__0_n_0                    |                                                     |                2 |              8 |
+|  CLK100MHZ_IBUF_BUFG         | snake/cursor[3]_i_2_n_0                           | snake/cursor                                        |                2 |              8 |
+|  CLK100MHZ_IBUF_BUFG         | s0/level0                                         |                                                     |                2 |              8 |
+|  CLK100MHZ_IBUF_BUFG         | snake/twentytwotoCLK/flip3/headypos_reg[1]        | snake/twentytwotoCLK/flip3/headypos_reg[5]          |                1 |              8 |
+|  CLK100MHZ_IBUF_BUFG         | menu/cursor[3]_i_2__0_n_0                         | dbRESET/flip3/SR[0]                                 |                2 |              8 |
+|  CLK100MHZ_IBUF_BUFG         | menu/stateMUX_reg[3]                              | bar/stateMUX_reg[0]                                 |                1 |              8 |
+|  CLK100MHZ_IBUF_BUFG         | wave/cursor[3]_i_2__3_n_0                         | wave/cursor[3]_i_1__2_n_0                           |                1 |              8 |
+|  snake/p_0_in                |                                                   |                                                     |                3 |             10 |
+|  CLK100MHZ_IBUF_BUFG         | pong/twentytoCLK/flip3/ballYpos_reg[5]            | pong/twentytoCLK/flip3/SR[0]                        |                2 |             12 |
+|  CLK100MHZ_IBUF_BUFG         | pong/twentytoCLK/flip4/E[0]                       |                                                     |                2 |             12 |
+|  CLK100MHZ_IBUF_BUFG         |                                                   | pong/twentytoCLK/flip3/comScore_reg[0]              |                2 |             12 |
+|  CLK100MHZ_IBUF_BUFG         | snake/twentytwotoCLK/flip3/E[0]                   |                                                     |                5 |             12 |
+|  pong/p_1_in                 |                                                   |                                                     |                2 |             12 |
+|  pong/p_1_in                 | pong/p_0_out                                      |                                                     |                3 |             12 |
+|  snake/p_0_in                | snake/segreg0                                     |                                                     |                3 |             14 |
+|  CLK100MHZ_IBUF_BUFG         | pong/twentytoCLK/flip3/ballYpos_reg[5]            | pong/twentytoCLK/flip3/SS[0]                        |                5 |             14 |
+|  CLOCK                       |                                                   |                                                     |                4 |             20 |
+|  CLK100MHZ_IBUF_BUFG         |                                                   | ctr20k[11]_i_1_n_0                                  |                3 |             22 |
+|  CLK100MHZ_IBUF_BUFG         | snake/twentytwotoCLK/flip3/tailxpos_reg[4]_rep__2 |                                                     |                7 |             22 |
+| ~microphone/J_MIC3_Pin4_OBUF |                                                   |                                                     |                4 |             24 |
+|  J_MIC3_Pin1_OBUF_BUFG       | s0/max0_carry__0_n_2                              | s0/max                                              |                4 |             24 |
+|  CLK100MHZ_IBUF_BUFG         |                                                   | J_MIC3_Pin1_OBUF_BUFG                               |                3 |             24 |
+|  bar/ctr21_reg[14]           |                                                   |                                                     |                3 |             24 |
+|  CLK100MHZ_IBUF_BUFG         | snake/pelletypos                                  | snake/pelletxpos[5]_i_1_n_0                         |                3 |             24 |
+|  CLK100MHZ_IBUF_BUFG         | snake/twentytwotoCLK/flip3/headxpos_reg[4]_rep__7 | snake/twentytwotoCLK/flip3/headxpos_reg[4]_rep__7_0 |                6 |             26 |
+|  J_MIC3_Pin1_OBUF_BUFG       |                                                   |                                                     |                5 |             26 |
+|  bar/ctr21_reg[4]            | bar/oled_data[15]_i_1__1_n_0                      |                                                     |                6 |             28 |
+|  CLK100MHZ_IBUF_BUFG         | snake/ledreg[15]_i_2_n_0                          | snake/p_0_out                                       |                4 |             32 |
+|  CLK100MHZ_IBUF_BUFG         | wave/ledreg[15]_i_2__2_n_0                        | wave/ledreg[15]_i_1__3_n_0                          |                4 |             32 |
+|  CLK100MHZ_IBUF_BUFG         | pong/ledreg[15]_i_2__0_n_0                        | pong/ledreg[15]_i_1__1_n_0                          |                4 |             32 |
+|  CLK100MHZ_IBUF_BUFG         | bar/ledpause                                      | bar/ledpause[15]_i_1_n_0                            |                3 |             32 |
+| ~clk6p25m_BUFG               |                                                   | d0/frame_counter[16]_i_1_n_0                        |                5 |             34 |
+|  CLK100MHZ_IBUF_BUFG         |                                                   | snake/rng[12]_i_1_n_0                               |                8 |             34 |
+|  CLK100MHZ_IBUF_BUFG         |                                                   | bar/p_1_in[1]                                       |                5 |             40 |
+|  CLK100MHZ_IBUF_BUFG         |                                                   | snake/pausectr[20]_i_1_n_0                          |                5 |             40 |
+| ~clk6p25m_BUFG               | d0/delay[0]_i_1_n_0                               |                                                     |                5 |             40 |
+|  CLK100MHZ_IBUF_BUFG         |                                                   | pong/pausectr[20]_i_1__1_n_0                        |                5 |             40 |
+|  CLK100MHZ_IBUF_BUFG         |                                                   | wave/p_1_in[1]                                      |                5 |             40 |
+|  J_MIC3_Pin1_OBUF_BUFG       |                                                   | s0/COUNT24[23]_i_1_n_0                              |                6 |             46 |
+| ~clk6p25m_BUFG               | d0/state                                          |                                                     |                9 |             64 |
+|  CLK100MHZ_IBUF_BUFG         | snake/eaten_reg_n_0                               | snake/length                                        |               17 |             70 |
+|  CLK100MHZ_IBUF_BUFG         | oled_data[15]_i_1__3_n_0                          |                                                     |               15 |             82 |
+| ~clk6p25m_BUFG               |                                                   | d0/spi_word[39]_i_1_n_0                             |               14 |             90 |
+|  ctr27_reg[15]               |                                                   |                                                     |              142 |            960 |
+|  CLK100MHZ_IBUF_BUFG         |                                                   |                                                     |              942 |           3504 |
+|  CLK100MHZ_IBUF_BUFG         | snake/twentytwotoCLK/flip3/commandline_reg[0][0]  | snake/twentytwotoCLK/flip3/SR[0]                    |              727 |           5520 |
++------------------------------+---------------------------------------------------+-----------------------------------------------------+------------------+----------------+
 
 

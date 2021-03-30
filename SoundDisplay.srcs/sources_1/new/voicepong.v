@@ -21,7 +21,9 @@
 
 
 module voicepong (                                                  
-    input CLK100MHZ,                              
+    input CLK100MHZ,  
+    input [3:0] audiolevel16,
+    input [15:0] sw,                            
     input btnC,                                                       
     input btnD,                                                       
     input btnL,                                                       
@@ -90,17 +92,44 @@ module voicepong (
     always @ (posedge CLK100MHZ) begin                   
         ctr27 <= ctr27 + 1;
         
+        //Reset
+        if (reset || globalreset) begin 
+            playerScore <= 0; 
+            comScore <= 0;
+            ballXpos <= 45;
+            ballYpos <= 30;
+            playerPaddlePos <= 7;
+            scoreWait <= 1;
+            reset <= 0;
+        end
+        
         if (statechange != 15) begin
             statechange <= 15;       
         end                         
         
-        if (dbounceU && playerPaddlePos <= 11 && !pause && !gameover) begin
-            playerPaddlePos <= playerPaddlePos + 1; 
-        end                                         
-                                                    
-        if (dbounceD && playerPaddlePos >= 3 && !pause && !gameover) begin 
-            playerPaddlePos <= playerPaddlePos - 1; 
-        end  
+        if (sw[0]) begin
+            if (dbounceU && playerPaddlePos <= 11 && !pause && !gameover && sw[0]) begin    
+                playerPaddlePos <= playerPaddlePos + 1;                                     
+            end                                                                             
+                                                                                            
+            else if (dbounceD && playerPaddlePos >= 3 && !pause && !gameover && sw[0]) begin
+                playerPaddlePos <= playerPaddlePos - 1;                                     
+            end                                                                             
+        end
+        
+        else begin
+            if (audiolevel16 < 3) begin
+                playerPaddlePos <= 3;
+            end
+            
+            else if (audiolevel16 > 11) begin
+                playerPaddlePos <= 11;
+            end
+            
+            else begin
+                playerPaddlePos <= audiolevel16;
+            end
+        end
         
         if (btnL && btnR && !pause) begin                             
             pausectr <= pausectr + 1;                                 
@@ -164,7 +193,7 @@ module voicepong (
         end
     
         //Begin game logic
-        if (convertclk20) begin
+        if (convertclk20 && !pause && !gameover) begin
             //Ball hits top of screen
             if (ballYpos == 4 && ballYvel == 1) begin
                 ballYvel <= ~ballYvel;
@@ -189,48 +218,14 @@ module voicepong (
             
             //Ball X velocity                                                                          
             case (ballXvel)
-                0: begin
-                    if (pause) begin
-                        ballXpos <= ballXpos;
-                    end
-                    
-                    else begin
-                        ballXpos <= !scoreWait ? ballXpos + 1 : 45;
-                    end
-                end
-                
-                1: begin
-                    if (pause) begin                               
-                        ballXpos <= ballXpos;                      
-                    end                                            
-                                                                   
-                    else begin                                     
-                        ballXpos <= !scoreWait ? ballXpos - 1 : 45;
-                    end                                                           
-                end
+                0: ballXpos <= !scoreWait ? ballXpos + 1 : 45;
+                1: ballXpos <= !scoreWait ? ballXpos - 1 : 45;
             endcase
             
             //Ball Y velocity
             case (ballYvel)                  
-                0: begin                     
-                    if (pause) begin                               
-                        ballYpos <= ballYpos;                      
-                    end                                            
-                                                                   
-                    else begin                                     
-                        ballYpos <= !scoreWait ? ballYpos + 1 : 30;
-                    end                                           
-                end                          
-                                             
-                1: begin                     
-                    if (pause) begin                               
-                        ballYpos <= ballYpos;                      
-                    end                                            
-                                                                   
-                    else begin                                     
-                        ballYpos <= !scoreWait ? ballYpos - 1 : 30;
-                    end                                     
-                end                          
+                0: ballYpos <= !scoreWait ? ballYpos + 1 : 30;
+                1: ballYpos <= !scoreWait ? ballYpos - 1 : 30;                       
             endcase
             
             //COM scores
@@ -272,21 +267,11 @@ module voicepong (
                 if (lastPlayerWin == 0) begin
                     comBlink <= waitctr[3] == 1 ? 1 : 0;
                 end
-            end
-            
-            //Reset
-            if (reset || globalreset) begin 
-                playerScore <= 0; 
-                comScore <= 0;
-                ballXpos <= 45;
-                ballYpos <= 30;
-                scoreWait <= 1;
-                reset <= 0;                                          
-            end                 
+            end                
         end 
     end
     
-    always @ (posedge ctr27[22]) begin
+    always @ (posedge ctr27[23]) begin
         //COM AI
         if (ballYpos < 25 - (comPaddlePos - 7) * 4 && comPaddlePos <= 11) begin
             comPaddlePos <= comPaddlePos + 1;

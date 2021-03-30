@@ -2,7 +2,11 @@
 
 module volumebar (
     input CLK100MHZ,
+    input [11:0] mic_in,
+    input [3:0] volume,
     input [15:0] sw,
+    //sw[0] toggles between volume and mic_in
+    //sw[1] turns on alphabet
     //sw[3] toggles beween a 1 px white border and a 3 px white border
     //sw[4] hides border
     //sw[5] toggles color scheme
@@ -30,7 +34,6 @@ module volumebar (
     output reg [3:0] statechange = 15
     //btnL moves the bar to the left
     //btnR moves the bar to the right
-    //input [3:0] volume,
     );
     
     reg [20:0] ctr21 = 0;
@@ -39,11 +42,12 @@ module volumebar (
     reg [2:0] ctr6p25m = 0;
     reg clk6p25m = 0;
     
+    reg [15:0] ledpause = 0;
+    reg [15:0] ledvolume = 0; 
     reg pause = 0;
     reg reset = 0;
     reg [3:0] barxpos = 7;
     reg [3:0] cursor = 0;
-    reg [3:0] volume = 0;
     reg [1:0] segdisplayctr = 0;
     
     reg [6:0] charL = 7'b1000111;
@@ -71,24 +75,44 @@ module volumebar (
     
     reg [15:0] pausedata [0:6143];       
     initial $readmemh("pausedata.txt", pausedata);
-    //reg [15:0] gameover [0:6143];       
-    //initial $readmemh("gameover.txt", gameover);
     
     always @ (posedge CLK100MHZ) begin
         ctr21 <= ctr21 + 1;
         ctr6p25m <= ctr6p25m + 1;                        
         clk6p25m <= ctr6p25m == 0 ? ~clk6p25m : clk6p25m;
+        ledreg <= btnL && btnR && !pause ? ledpause : ledvolume;
+        
+        if (!sw[0] && !pause) begin
+            case (volume)
+            0: ledvolume <= 1;
+            1: ledvolume <= 3;
+            2: ledvolume <= 7;
+            3: ledvolume <= 15;
+            4: ledvolume <= 31;
+            5: ledvolume <= 63;
+            6: ledvolume <= 127;
+            7: ledvolume <= 255;
+            8: ledvolume <= 511;
+            9: ledvolume <= 1023;
+            10: ledvolume <= 2047;
+            11: ledvolume <= 4095;
+            12: ledvolume <= 8191;
+            13: ledvolume <= 16383;
+            14: ledvolume <= 32767;
+            15: ledvolume <= 65535;
+            endcase
+        end
+        
+        else if (sw[0] && !pause) begin
+            ledvolume <= mic_in;                    
+        end
+        
+        else begin
+            ledvolume <= 0;
+        end
         
         if (statechange != 15) begin
             statechange <= 15;       
-        end                         
-        
-        if (dbounceU && !pause) begin
-            volume <= volume + 1;
-        end
-        
-        if (dbounceD && !pause) begin
-            volume <= volume - 1;
         end
         
         if (dbounceL && barxpos > 0) begin      
@@ -101,19 +125,19 @@ module volumebar (
         
         if (btnL && btnR && !pause) begin
             pausectr <= pausectr + 1;
-            ledreg <= pausectr == 0 ? (ledreg << 1) + 1 : ledreg;
+            ledpause <= pausectr == 0 ? (ledpause << 1) + 1 : ledpause;
             
-            if (ledreg == 65535) begin
+            if (ledpause == 65535) begin
                 pause <= 1;
                 pausectr <= 0;
-                ledreg <= 0;
+                ledpause <= 0;
+                cursor <= 0;
             end
-                
         end
         
         else begin
             pausectr <= 1;
-            ledreg <= 0;
+            ledpause <= 0;
         end 
         
         if (dbounceU && pause == 1 && cursor > 0) begin
@@ -141,7 +165,6 @@ module volumebar (
         end   
         
         if (reset || globalreset) begin
-            volume <= 0;
             barxpos <= 7;
             reset <= 0;
         end                                                    
@@ -286,7 +309,7 @@ module volumebar (
         
         case (segdisplayctr)
             0: begin
-                anreg <= pause ? 15 : 7;
+                anreg <= pause || !sw[1] ? 15 : 7;
                 if (volume <= 5) begin
                     segreg <= charL;
                 end
@@ -301,7 +324,7 @@ module volumebar (
             end
             
             1: begin            
-                anreg <= 11;     
+                anreg <= 15;     
                 segreg <= 127;
             end                 
             

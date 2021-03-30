@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Mon Mar 15 14:45:44 2021
+| Date             : Tue Mar 30 18:07:58 2021
 | Host             : LAPTOP-PE3V4VON running 64-bit major release  (build 9200)
 | Command          : report_power -file Top_Student_power_routed.rpt -pb Top_Student_power_summary_routed.pb -rpx Top_Student_power_routed.rpx
 | Design           : Top_Student
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.077        |
+| Total On-Chip Power (W)  | 0.212        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.006        |
+| Dynamic (W)              | 0.140        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
-| Max Ambient (C)          | 84.6         |
-| Junction Temperature (C) | 25.4         |
+| Max Ambient (C)          | 83.9         |
+| Junction Temperature (C) | 26.1         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,17 +52,18 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.001 |        3 |       --- |             --- |
-| Slice Logic    |     0.001 |      669 |       --- |             --- |
-|   LUT as Logic |     0.001 |      309 |     20800 |            1.49 |
-|   CARRY4       |    <0.001 |       55 |      8150 |            0.67 |
-|   Register     |    <0.001 |      216 |     41600 |            0.52 |
-|   BUFG         |    <0.001 |        1 |        32 |            3.13 |
-|   Others       |     0.000 |       49 |       --- |             --- |
-| Signals        |     0.001 |      484 |       --- |             --- |
-| I/O            |     0.002 |       43 |       106 |           40.57 |
+| Clocks         |     0.023 |        3 |       --- |             --- |
+| Slice Logic    |     0.034 |    16895 |       --- |             --- |
+|   LUT as Logic |     0.031 |     8468 |     20800 |           40.71 |
+|   CARRY4       |    <0.001 |      316 |      8150 |            3.88 |
+|   F7/F8 Muxes  |    <0.001 |     1251 |     32600 |            3.84 |
+|   Register     |    <0.001 |     5612 |     41600 |           13.49 |
+|   BUFG         |    <0.001 |        3 |        32 |            9.38 |
+|   Others       |     0.000 |       85 |       --- |             --- |
+| Signals        |     0.042 |    11859 |       --- |             --- |
+| I/O            |     0.042 |       51 |       106 |           48.11 |
 | Static Power   |     0.072 |          |           |                 |
-| Total          |     0.077 |          |           |                 |
+| Total          |     0.212 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,9 +73,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.014 |       0.004 |      0.010 |
-| Vccaux    |       1.800 |     0.013 |       0.000 |      0.013 |
-| Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
+| Vccint    |       1.000 |     0.108 |       0.098 |      0.010 |
+| Vccaux    |       1.800 |     0.014 |       0.002 |      0.013 |
+| Vcco33    |       3.300 |     0.013 |       0.012 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -95,7 +96,7 @@ Table of Contents
 | User Input Data             | Confidence | Details                                                | Action                                                                                                             |
 +-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
 | Design implementation state | High       | Design is routed                                       |                                                                                                                    |
-| Clock nodes activity        | Low        | User specified less than 75% of clocks                 | Provide missing clock activity with a constraint file, simulation results or by editing the "By Clock Domain" view |
+| Clock nodes activity        | Medium     | More than 5% of clocks are missing user specification  | Provide missing clock activity with a constraint file, simulation results or by editing the "By Clock Domain" view |
 | I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view           |
 | Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views         |
 | Device models               | High       | Device models are Production                           |                                                                                                                    |
@@ -141,9 +142,15 @@ Table of Contents
 +--------------------+-----------+
 | Name               | Power (W) |
 +--------------------+-----------+
-| Top_Student        |     0.006 |
-|   c0               |     0.001 |
+| Top_Student        |     0.140 |
+|   bar              |     0.003 |
+|   c0               |     0.013 |
 |   d0               |    <0.001 |
+|   dbC              |    <0.001 |
+|     flip1          |    <0.001 |
+|     flip2          |    <0.001 |
+|     flip3          |    <0.001 |
+|     flip4          |    <0.001 |
 |   dbD              |    <0.001 |
 |     flip1          |    <0.001 |
 |     flip2          |    <0.001 |
@@ -159,17 +166,32 @@ Table of Contents
 |     flip2          |    <0.001 |
 |     flip3          |    <0.001 |
 |     flip4          |    <0.001 |
+|   dbRESET          |    <0.001 |
+|     flip1          |    <0.001 |
+|     flip2          |    <0.001 |
+|     flip3          |    <0.001 |
+|     flip4          |    <0.001 |
 |   dbU              |    <0.001 |
 |     flip1          |    <0.001 |
 |     flip2          |    <0.001 |
 |     flip3          |    <0.001 |
 |     flip4          |    <0.001 |
-|   snake            |     0.001 |
-|     twentytwotoCLK |    <0.001 |
+|   menu             |     0.002 |
+|   microphone       |    <0.001 |
+|   pong             |     0.005 |
+|     twentytoCLK    |    <0.001 |
 |       flip1        |    <0.001 |
 |       flip2        |    <0.001 |
 |       flip3        |    <0.001 |
 |       flip4        |    <0.001 |
+|   s0               |    <0.001 |
+|   snake            |     0.069 |
+|     twentytwotoCLK |     0.007 |
+|       flip1        |    <0.001 |
+|       flip2        |    <0.001 |
+|       flip3        |     0.007 |
+|       flip4        |    <0.001 |
+|   wave             |     0.002 |
 +--------------------+-----------+
 
 
